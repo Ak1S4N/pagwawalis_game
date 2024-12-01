@@ -1686,11 +1686,12 @@ _data = {
 "cutscene_1": SubResource("Animation_p58jh")
 }
 
-[node name="tutorial" type="Node2D" node_paths=PackedStringArray("dialogue_sub", "paused_menu")]
+[node name="tutorial" type="Node2D" node_paths=PackedStringArray("dialogue_sub", "paused_menu", "trashes_parent_node")]
 y_sort_enabled = true
 script = ExtResource("1_nbrfv")
 dialogue_sub = NodePath("dialogue_manager")
 paused_menu = NodePath("CanvasLayer/pause_menu")
+trashes_parent_node = NodePath("trashes")
 
 [node name="dialogue_manager" type="Node" parent="."]
 script = ExtResource("2_q14bh")

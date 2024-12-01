@@ -63,7 +63,7 @@ set Quests.set_old_man(1)
 set Quests.open_mis_old_man(3)
 => END
 
-~ quest_done_3
+~ quest_done_5
 Old Man: Jolly! Now everyone on the driveway is safe!
 Old Man: Well, thank you young lad! You've been a great help today!
 - Finally! I can go ho-
@@ -73,5 +73,5 @@ Old Man: Well, would you be so kind to help her out?
 - But, I need to go ho-
 Old Man: I will pay you handsomely!
 - Great...
-set PlayerConditionals.back_to_main_menu()
+
 => END
