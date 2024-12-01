@@ -1,0 +1,11 @@
+~ interact
+Police Commando: What are you still waiting here?
+Police Commando: Get out of this place already!
+- I.. I don't know how.
+	Police Commando: How about try clicking ESC!?
+- Sir! Yes, Sir!
+	Police Commando: FASTER!
+
+Press ESC to open the Main Menu and get out!
+do PlayerConditionals.is_dialogue = false
+=> END

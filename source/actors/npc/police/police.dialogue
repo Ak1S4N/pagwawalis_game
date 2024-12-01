@@ -16,20 +16,68 @@ Police: W, A, S, D keys! W, A, S, D keys!
 Police: And the last one is E!
 Police: E is for INTERACTING!
 
-Press WASD to move. and press E to interact to NPCs or Objects. Try it!
+Press WASD to move. and press E to interact to NPCs or Objects.
+Try interacting with the Police with a Sad Face on top of his head!
+The Sad Face indicates quest progress! Blue face for "Quest Available"
+Yellow indicates for "Quest Ongoing"
+and Green indicates for "Quest finished!"
+Go on! Talk to him! Don't be shy!
+do PlayerConditionals.is_dialogue = false
 => END
 
 ~ quest_available
+Police: Good!
+Police: Get a hang a bit more of your movement before you do anything shady!
+Police: Anyway, CONTINUE WITH THE COMMUNITY SERVICE!
+Police: Clean all the trashes!
+Police: NOW!
+
+Interact (Press E) with the trashes you see on the ground.
+do PlayerConditionals.movement_tut_done = true
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ not_finished_tutorial
+Police: Hey! Don't do anything yet!
+Police: Talk to me!
+Interact with the Police...
+
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ all_trash_cleaned
+Police: Alright! That's enough now!
+Police: Get back here and talk to me!
+
+After a quest has been finished, go back to the NPC that the quest came from
+When finishing a quest, you can get bountiful rewards.
+
+do PlayerConditionals.is_dialogue = false
+=> END
 
 
+~ quest_finished
+Police: Alright! You did good...
+- So, can I go back to the outside world now??
+Police: No! ABSOLUTELY NOT!!!
+Police: You will stay here FOREVER!!
+set Cutscenes.tut_cut_1()
+Police Commando: That's enough!
+Police: W-what!?
+Police Commando: He's been here long enough!
+Police: B-b-b-but...
+Police Commando: You've been keeping him in community service for 5 months already!
+Police: But, he deserves it!
+Police Commando: He's only supposed TO STAY FOR 3 WEEKS!!
+Police: Um...
 
-#Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-#Nathan: Here are some choices.
-#- First one
-#	Nathan: You picked the first one.
-#- Second one
-#	Nathan: You picked the second one.
-#- Start again => this_is_a_node_title
-#- End the conversation => END
-#Nathan: For more information see the online documentation.
-#=> END
+do PlayerConditionals.get_out_of_tutorial = true
+do PlayerConditionals.is_dialogue = false
+=> END
+
+
+~ interact
+Police: Fine... You can go now.
+Police: :<
+do PlayerConditionals.is_dialogue = false
+=> END

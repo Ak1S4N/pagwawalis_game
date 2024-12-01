@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 		move()
 	move_and_slide()
 
+
 func move():
 	if input_dir:
 		ray_cast_2d.target_position = input_dir * Vector2(32,32)
@@ -35,11 +36,13 @@ func move():
 		elif not ray_cast_2d.get_collider():
 			if is_moving == false:
 					animation_manager.looking_at = input_dir
+					animation_manager.walking_anim()
 					is_moving = true
 					var tween = create_tween()
 					tween.tween_property(self, "position", position + (input_dir * tile_size), .2)
 					tween.tween_callback(move_false)
-	
+
 
 func move_false():
+	animation_manager.idle_anim()
 	is_moving = false

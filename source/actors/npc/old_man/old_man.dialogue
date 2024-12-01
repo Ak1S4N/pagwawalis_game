@@ -1,0 +1,77 @@
+~ quest_available_1
+Old Man: Hey there, young lad.
+- How're you?
+- So, you're the old man!
+	Old Man: Hey, I'm not that old!
+
+Old Man: Well, anyway. I'm having a trash problem 'round my property. Random kids kept throwing stuff away.
+Old Man: I mean, I don't want to scare them but, I wish someone could just clean these all up for me.
+Old Man: Can you do that?
+- Well, that's why I am here!
+
+Old Man: Great! Great! Alright, please start now.
+do PlayerConditionals.is_dialogue = false
+set Quests.set_old_man(1)
+set Quests.open_mis_old_man(1)
+=> END
+
+~ quest_done_1
+Old Man: Jolly! Jolly!
+Old Man: You're doing great!
+Old Man: I didn't believe it! My lawn is already clean!
+Old Man: Say, where did you come from?
+- I was just raised to be a natural!
+	Old Man: I knew it!
+	Old Man: Of course you woud be!
+
+- I just came out from jail.
+	Old Man: Oh... Well, I see.
+
+Old Man: Anyways, I know kids mainly dirty up my lawn. But, my playground is always bombarded with children!
+Old Man: Can you please continue cleaning some on the playground?
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.score = 0
+set Quests.set_old_man(1)
+set Quests.open_mis_old_man(2)
+=> END
+
+~ quest_available_2
+Old Man: What are you still doing here?
+Old Man: Well, get going. Clean the trashes in the playground!
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ quest_done_2
+Old Man: Wow! You just kept impressing me!
+Old Man: The playground is just as good as new!
+Old Man: Just like way, way before when I was sa child.
+Old Man: ...
+Old Man: What are you looking at?
+Old Man: I am not that OLD!!!
+- Whatever you say, Old Man.
+- Yea, I agree.
+	Old Man: Well, finally!
+Old Man: Anyway, one last favor.
+Old Man: Teenagers this time. They kept messing up the road with trashes!
+Old Man: Yeah, yeah, I know this isn't part of my property anymore...
+Old Man: But can you - at least! Make sure the drive way is safe?
+Old Man: For short, can you clean the trashes on the road as well? Just 5 of them.
+
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.score = 0
+set Quests.set_old_man(1)
+set Quests.open_mis_old_man(3)
+=> END
+
+~ quest_done_3
+Old Man: Jolly! Now everyone on the driveway is safe!
+Old Man: Well, thank you young lad! You've been a great help today!
+- Finally! I can go ho-
+Old Man: Although, I just have one concern!
+Old Man: A friend of mine named Sherley, she have trash problems too inside of her house!
+Old Man: Well, would you be so kind to help her out?
+- But, I need to go ho-
+Old Man: I will pay you handsomely!
+- Great...
+set PlayerConditionals.back_to_main_menu()
+=> END
