@@ -1744,17 +1744,25 @@ shape = SubResource("RectangleShape2D_rte32")
 
 [node name="trashes" type="Node2D" parent="."]
 
-[node name="trash" parent="trashes" instance=ExtResource("5_iwy2d")]
-position = Vector2(304, 96)
+[node name="trash" parent="trashes" node_paths=PackedStringArray("quest_master") instance=ExtResource("5_iwy2d")]
+position = Vector2(304, 48)
+quest_master = NodePath("../../police_npc")
 
-[node name="trash2" parent="trashes" instance=ExtResource("5_iwy2d")]
+[node name="trash2" parent="trashes" node_paths=PackedStringArray("quest_master") instance=ExtResource("5_iwy2d")]
 position = Vector2(288, 128)
+quest_master = NodePath("../../police_npc")
 
-[node name="trash3" parent="trashes" instance=ExtResource("5_iwy2d")]
+[node name="trash3" parent="trashes" node_paths=PackedStringArray("quest_master") instance=ExtResource("5_iwy2d")]
 position = Vector2(352, 80)
+quest_master = NodePath("../../police_npc")
 
-[node name="trash4" parent="trashes" instance=ExtResource("5_iwy2d")]
+[node name="trash4" parent="trashes" node_paths=PackedStringArray("quest_master") instance=ExtResource("5_iwy2d")]
 position = Vector2(352, 128)
+quest_master = NodePath("../../police_npc")
+
+[node name="trash5" parent="trashes" node_paths=PackedStringArray("quest_master") instance=ExtResource("5_iwy2d")]
+position = Vector2(320, 176)
+quest_master = NodePath("../../police_npc")
 
 [node name="player" parent="." groups=["actors"] instance=ExtResource("6_ecu1c")]
 y_sort_enabled = true

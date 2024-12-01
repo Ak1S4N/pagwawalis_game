@@ -4,14 +4,13 @@ extends Node
 @export var quest_master: NPC
 
 func _process(delta: float) -> void:
-	match Quests.current_old_man:
-		"QUEST_AVA":
+	match Quests.kid_lary:
+		1:
 			sprite_2d_2.frame = 5
-		"QUEST_ONG":
+		2:
 			sprite_2d_2.frame = 3
-		"QUEST_DON":
+		3:
 			sprite_2d_2.frame = 2
 	
-	
-	if quest_master.NPC_score >= 4:
-		Quests.set_old_man(2)
+	if quest_master.NPC_score > 4:
+		Quests.kid_lary = 3

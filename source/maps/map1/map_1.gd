@@ -15,7 +15,7 @@ func _ready() -> void:
 	dialogue_sub_man.player_dial('start_1')
 	PlayerConditionals.score = 0
 	PlayerConditionals.movement_tut_done = true
-	Quests.old_man_quest.connect(show_trash)
+	Quests.open_mission.connect(show_trash)
 	PlayerConditionals.back_to_menu.connect(back_to_menu)
 
 func _physics_process(delta: float) -> void:

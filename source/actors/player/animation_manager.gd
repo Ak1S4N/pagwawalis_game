@@ -19,7 +19,7 @@ func walking_anim() -> void:
 
 func idle_anim() -> void:
 	animation_tree.get("parameters/playback").travel("idle")
-
+	
 func put_away_anim() -> void:
 	animation_tree.get("parameters/playback").travel("grab")
 	await animation_tree.animation_finished

@@ -30,12 +30,12 @@ func _physics_process(delta: float) -> void:
 func move():
 	if input_dir:
 		ray_cast_2d.target_position = input_dir * Vector2(32,32)
+		animation_manager.looking_at = input_dir
 		if ray_cast_2d.get_collider()\
 			and (input_dir * Vector2(32,32)) == ray_cast_2d.target_position:
 				return
 		elif not ray_cast_2d.get_collider():
 			if is_moving == false:
-					animation_manager.looking_at = input_dir
 					animation_manager.walking_anim()
 					is_moving = true
 					var tween = create_tween()

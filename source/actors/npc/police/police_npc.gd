@@ -6,13 +6,15 @@ extends NPC
 @export var dialogue_sub: DialogueSubManager
 
 func interact():
+	print(NPC_score)
+	
 	if PlayerConditionals.movement_tut_done == false\
-	and PlayerConditionals.score < 4:
+	and NPC_score < 4:
 		dialogue_sub.police_dial("quest_available")
 
 	elif PlayerConditionals.movement_tut_done == true\
 	and PlayerConditionals.get_out_of_tutorial == false\
-	and PlayerConditionals.score >= 4:
+	and NPC_score >= 4:
 		dialogue_sub.police_dial("quest_finished")
 
 	elif PlayerConditionals.get_out_of_tutorial == true\

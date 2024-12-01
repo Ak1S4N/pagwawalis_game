@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://16brgydraq3v"]
+[gd_scene load_steps=10 format=3 uid="uid://b51sngcpu4mcb"]
 
-[ext_resource type="Script" path="res://source/actors/npc/police/police_npc.gd" id="1_e4407"]
-[ext_resource type="Texture2D" uid="uid://dx8bys4spbf4b" path="res://assets/tileset/actors/npc/policeman_npc.png" id="1_lhu2y"]
-[ext_resource type="Script" path="res://source/scripts/classes/quest_manager.gd" id="2_rl5nm"]
-[ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="3_f1hm8"]
-[ext_resource type="AudioStream" uid="uid://bvux8ytc02pug" path="res://assets/audios/sfx/police_whistle.mp3" id="3_ypy2l"]
+[ext_resource type="Script" path="res://source/actors/npc/teenager_johnny/teenager_johnny.gd" id="1_1trit"]
+[ext_resource type="Texture2D" uid="uid://wscdgajdt3xs" path="res://assets/tileset/actors/npc/teenager_johnny.png" id="1_kip3q"]
+[ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_4ocgl"]
+[ext_resource type="Script" path="res://source/actors/npc/teenager_johnny/quest_manager.gd" id="2_wfdm7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l1wdn"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_daigh"]
 radius = 8.0
 
 [sub_resource type="Animation" id="Animation_3x6d5"]
@@ -66,43 +65,38 @@ _data = {
 "look_back": SubResource("Animation_5reoq")
 }
 
-[node name="police_npc" type="StaticBody2D"]
-script = ExtResource("1_e4407")
+[node name="teenager_johnny" type="StaticBody2D"]
+script = ExtResource("1_1trit")
 
 [node name="quest_manager" type="Node" parent="." node_paths=PackedStringArray("quest_master")]
-script = ExtResource("2_rl5nm")
+script = ExtResource("2_wfdm7")
 quest_master = NodePath("..")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-z_index = 1
-texture_filter = 1
-position = Vector2(0, -24)
-texture = ExtResource("3_f1hm8")
-offset = Vector2(8, 8)
-hframes = 8
-vframes = 5
-frame = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(8, 0)
-texture = ExtResource("1_lhu2y")
+texture = ExtResource("1_kip3q")
 hframes = 56
 vframes = 20
 frame = 74
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -24)
+texture = ExtResource("2_4ocgl")
+offset = Vector2(8, 8)
+hframes = 8
+vframes = 5
+frame = 2
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 7)
-shape = SubResource("CircleShape2D_l1wdn")
+shape = SubResource("CircleShape2D_daigh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ikpbj")
 }
 autoplay = "idle"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ypy2l")
-volume_db = -4.99
-autoplay = true

@@ -1,21 +1,18 @@
 ~ starting_tutorial
-Police: Alright! Listen up!
-Police: This is the community service! You shall do as I say from now on!
-Police: Do you understand!?
+Police: Hey there!
+Police: This is the community service! Thank you for volunteering!
+Police: Are you ready!?
 - Yes, Sir!
 	Police: Good!
-
 - No...?
 	Police: What do you mean "No"??????
 	Police: Do you want me to increase your sentence!?
 	Police: If you don't me to whoop you back to your room, then better keep your ears wide!
-
 Police: First! Remember the 5 important KEYS!
 Police: W is forward, A is left, S is backward, and D is right!
 Police: W, A, S, D keys! W, A, S, D keys!
 Police: And the last one is E!
 Police: E is for INTERACTING!
-
 Press WASD to move. and press E to interact to NPCs or Objects.
 Try interacting with the Police with a Sad Face on top of his head!
 The Sad Face indicates quest progress! Blue face for "Quest Available"
@@ -74,7 +71,6 @@ Police: Um...
 do PlayerConditionals.get_out_of_tutorial = true
 do PlayerConditionals.is_dialogue = false
 => END
-
 
 ~ interact
 Police: Fine... You can go now.
