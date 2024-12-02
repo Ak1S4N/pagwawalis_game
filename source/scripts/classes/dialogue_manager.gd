@@ -8,6 +8,7 @@ const OLD_MAN = preload("res://source/actors/npc/old_man/old_man.dialogue")
 const KID_LARY = preload("res://source/actors/npc/kid_lary/kid_lary.dialogue")
 const ENVIRONMENTALIST_JANNA = preload("res://source/actors/npc/environmentalist_janna/environmentalist_janna.dialogue")
 const ADVENTURER_MICHEL = preload("res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue")
+const TEENAGER_JOHNNY = preload("res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue")
 
 
 func police_dial(title: String) -> void:
@@ -39,4 +40,5 @@ func adventurer_michel_dial(title: String) -> void:
 	PlayerConditionals.is_dialogue = true
 
 func teenager_johnny_dial(title: String) -> void:
-	pass
+	DialogueManager.show_dialogue_balloon(TEENAGER_JOHNNY, title)
+	PlayerConditionals.is_dialogue = true

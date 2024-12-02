@@ -18,4 +18,5 @@ Adventurer Michel: Very mindful!
 Adventurer Michel: Very Demure!
 Adventurer Michel: I like your job, fine young man! Keep doing your best at it!
 do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map1_score += 1
 => END

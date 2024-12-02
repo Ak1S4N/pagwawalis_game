@@ -22,7 +22,7 @@ func open_mis_old_man(id: int) -> void:
 func set_kid_lary(id: int) -> void:
 	kid_lary = id
 
-func set_environmentalis_janna(id: int) -> void:
+func set_evironmentalist_janna(id: int) -> void:
 	environmentalist_janna = id
 
 func set_adventurer_michel(id: int) -> void:

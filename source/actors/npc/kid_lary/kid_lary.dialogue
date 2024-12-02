@@ -32,4 +32,5 @@ Kid Lary: A hero!
 Kid Lary: Someday, I'm gonna be like you!
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.score = 0
+do PlayerConditionals.map1_score += 1
 => END

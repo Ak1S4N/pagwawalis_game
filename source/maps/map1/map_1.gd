@@ -9,6 +9,8 @@ class_name map1
 @onready var mis_1: Node2D = $mis_1
 @onready var mis_2: Node2D = $mis_2
 @onready var mis_3: Node2D = $mis_3
+@onready var mis_4: Node2D = $mis_4
+@onready var mis_5: Node2D = $mis_5
 var cur_mis_id:int = 1
 
 func _ready() -> void:
@@ -38,6 +40,10 @@ func show_trash(id: int) -> void:
 			mis_2.visible = true
 		3:
 			mis_3.visible = true
+		4:
+			mis_4.visible = true
+		5:
+			mis_5.visible = true
 
 func back_to_menu() -> void:
 	Transitions.fade_into("res://source/UI/main_menu/main_menu.tscn")

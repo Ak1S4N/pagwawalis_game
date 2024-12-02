@@ -25,4 +25,5 @@ Old Man Andrew: Of course you woud be!
 Old Man Andrew: Anyways, Thank you! Come again and we'll join a coffee together
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.score -= 5
+do PlayerConditionals.map1_score += 1
 => END
