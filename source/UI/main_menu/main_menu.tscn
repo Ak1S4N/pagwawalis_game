@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=4 uid="uid://diwh5g7y7c2g5"]
+[gd_scene load_steps=27 format=4 uid="uid://diwh5g7y7c2g5"]
 
 [ext_resource type="Script" path="res://source/UI/main_menu/main_menu.gd" id="1_e0qvs"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_e4ft0"]
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="2_pnfj6"]
 [ext_resource type="FontFile" uid="uid://cukq56dfcji1i" path="res://assets/fonts/PressStart2P.ttf" id="3_ielpu"]
 [ext_resource type="AudioStream" uid="uid://cm6whouxpkxd8" path="res://assets/audios/bgm/Echoes of Tomorrow.mp3" id="4_c72lq"]
+[ext_resource type="Texture2D" uid="uid://no13se4kbcma" path="res://assets/objects/boy_icon.png" id="5_a7xln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqrvl"]
 texture = ExtResource("1_e4ft0")
@@ -681,7 +682,7 @@ tile_map_data = PackedByteArray("AAD8//n/AAAKACkAAAAKAP//AAAPAAcAAAALAAAAAAADAAw
 tile_set = SubResource("TileSet_eilji")
 
 [node name="player" type="Node2D" parent="background"]
-position = Vector2(112, -16)
+position = Vector2(32, -16)
 
 [node name="Sprite2D" type="Sprite2D" parent="background/player"]
 texture_filter = 1
@@ -771,6 +772,85 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.45
 
+[node name="Panel2" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -166.0
+offset_bottom = 166.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel2/VBoxContainer"]
+layout_mode = 2
+text = "NAME"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="name_edit" type="LineEdit" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Put your name here:"
+
+[node name="Control2" type="Control" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Gender"
+
+[node name="gender_edit" type="CheckButton" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_a7xln")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_c72lq")
 volume_db = -15.0
@@ -779,3 +859,5 @@ autoplay = true
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/main_game" to="." method="_on_main_game_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_button_up"]
 [connection signal="button_down" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/quit" to="." method="_on_quit_button_down"]
+[connection signal="text_changed" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer/name_edit" to="." method="_on_name_edit_text_changed"]
+[connection signal="toggled" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2/VBoxContainer/gender_edit" to="." method="_on_gender_edit_toggled"]

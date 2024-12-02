@@ -1,13 +1,22 @@
 extends CharacterBody2D
 class_name Player
 
+const MAIN_PLAYER_CLEANING_SIM = preload("res://assets/tileset/actors/player/main_player_cleaning_sim.png")
+const PLAYER_GIRL = preload("res://assets/tileset/actors/player/player_girl.png")
+
 var input_dir: Vector2
 @export var tile_size: float = 16
 var is_moving: bool = false
 
-
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var animation_manager: AnimationManager = $animation_manager
+
+func _ready() -> void:
+	if PlayerConditionals.gender_id == 0:
+		sprite_2d.texture = MAIN_PLAYER_CLEANING_SIM
+	elif PlayerConditionals.gender_id == 1:
+		sprite_2d.texture = PLAYER_GIRL
 
 
 func _physics_process(delta: float) -> void:

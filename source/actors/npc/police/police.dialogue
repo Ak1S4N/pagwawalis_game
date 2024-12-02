@@ -1,5 +1,5 @@
 ~ starting_tutorial
-Police: Hey there!
+Police: Hey there, {{PlayerConditionals.player_name}}!
 Police: This is the community service! Thank you for volunteering!
 Police: Our mission is to clean!
 Police: And to spread our cleaning generosity!
