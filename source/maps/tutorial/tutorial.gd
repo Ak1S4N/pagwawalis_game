@@ -16,7 +16,6 @@ func _ready() -> void:
 		if i.has_signal("not_done_yet"):
 			i.not_done_yet.connect(dialogue_sub.police_dial)
 
-
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
 		paused_menu.visible = !paused_menu.visible

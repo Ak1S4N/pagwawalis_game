@@ -8,6 +8,8 @@ func _ready() -> void:
 	Cutscenes.police_commando_entrance.connect(cutscene_1)
 	
 
+
+
 func cutscene_1() -> void:
 	police_commando.visible = true
 	police.back_anim()

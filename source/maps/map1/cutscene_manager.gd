@@ -10,3 +10,6 @@ func cutscene_1() -> void:
 	await animation_finished
 	bus.visible = false
 	
+
+func cutscene_2() -> void:
+	pass

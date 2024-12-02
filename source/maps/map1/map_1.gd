@@ -3,6 +3,7 @@ class_name map1
 
 @export var paused_menu: PausedMenu
 @export var dialogue_sub_man: DialogueSubManager
+@onready var cutscene_manager: AnimationPlayer = $CutsceneManager
 
 @onready var actors = get_tree().get_nodes_in_group("actors")
 
@@ -26,6 +27,11 @@ func _physics_process(delta: float) -> void:
 			actor.set_physics_process(false)
 		else:
 			actor.set_physics_process(true)
+	
+	if PlayerConditionals.map1_finished == false\
+	and PlayerConditionals.map1_score >= 5:
+		cutscene_manager.cutscene_2()
+		PlayerConditionals.map1_score = true
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
