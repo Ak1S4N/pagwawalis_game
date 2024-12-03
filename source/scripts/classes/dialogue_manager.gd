@@ -3,6 +3,8 @@ class_name DialogueSubManager
 
 const POLICE = preload("res://source/actors/npc/police/police.dialogue")
 const POLICE_COMMANDO = preload("res://source/actors/npc/police_commando/police_commando.dialogue")
+
+#mg_1
 const PLAYER = preload("res://source/actors/player/player.dialogue")
 const OLD_MAN = preload("res://source/actors/npc/old_man/old_man.dialogue")
 const KID_LARY = preload("res://source/actors/npc/kid_lary/kid_lary.dialogue")
@@ -10,6 +12,7 @@ const ENVIRONMENTALIST_JANNA = preload("res://source/actors/npc/environmentalist
 const ADVENTURER_MICHEL = preload("res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue")
 const TEENAGER_JOHNNY = preload("res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue")
 
+const BUS = preload("res://source/actors/inter_objects/bus/bus.dialogue")
 
 func police_dial(title: String) -> void:
 	DialogueManager.show_dialogue_balloon(POLICE, title)
@@ -41,4 +44,8 @@ func adventurer_michel_dial(title: String) -> void:
 
 func teenager_johnny_dial(title: String) -> void:
 	DialogueManager.show_dialogue_balloon(TEENAGER_JOHNNY, title)
+	PlayerConditionals.is_dialogue = true
+
+func bus_dial(title: String) -> void:
+	DialogueManager.show_dialogue_balloon(BUS, title)
 	PlayerConditionals.is_dialogue = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://o220dyhg1wxp"]
+[gd_scene load_steps=27 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
 [ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://3dxacguwwact" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.tscn" id="11_83xqc"]
 [ext_resource type="PackedScene" uid="uid://bqqns72eqta0r" path="res://source/actors/npc/adventurer_mic1/adventurer_michel_1.tscn" id="12_ph8q4"]
 [ext_resource type="PackedScene" uid="uid://b51sngcpu4mcb" path="res://source/actors/npc/teenager_johnny/teenager_johnny.tscn" id="13_b6slp"]
+[ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ncqp"]
 texture = ExtResource("1_c7s47")
@@ -428,6 +429,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1792, 944)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bus2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1888, 1552)]
+}
 
 [sub_resource type="Animation" id="Animation_f4tiw"]
 resource_name = "cut_1"
@@ -445,10 +458,27 @@ tracks/0/keys = {
 "values": [Vector2(1792, 944), Vector2(2176, 944)]
 }
 
+[sub_resource type="Animation" id="Animation_xorkp"]
+resource_name = "cut_2"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bus2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2.14355, 0.68302),
+"update": 0,
+"values": [Vector2(2000, 1552), Vector2(1664, 1552)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_byjao"]
 _data = {
 "RESET": SubResource("Animation_h44vd"),
-"cut_1": SubResource("Animation_f4tiw")
+"cut_1": SubResource("Animation_f4tiw"),
+"cut_2": SubResource("Animation_xorkp")
 }
 
 [node name="map_1" type="Node2D" node_paths=PackedStringArray("paused_menu", "dialogue_sub_man")]
@@ -539,6 +569,12 @@ dialogue_sub = NodePath("../dialogue_sub")
 [node name="teenager_johnny" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("13_b6slp")]
 z_index = 1
 position = Vector2(1648, 1504)
+dialogue_sub = NodePath("../dialogue_sub")
+
+[node name="bus2" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("18_g658m")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1888, 1552)
 dialogue_sub = NodePath("../dialogue_sub")
 
 [node name="invs_wall" type="StaticBody2D" parent="."]
@@ -701,3 +737,4 @@ script = ExtResource("8_lv3v3")
 stream = ExtResource("9_y3lc4")
 volume_db = -10.1
 autoplay = true
+bus = &"Music"

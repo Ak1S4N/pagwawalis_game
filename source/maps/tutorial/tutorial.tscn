@@ -1791,6 +1791,7 @@ visible = false
 stream = ExtResource("9_2uj46")
 volume_db = -10.1
 autoplay = true
+bus = &"Music"
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="." node_paths=PackedStringArray("police_commando", "police")]
 libraries = {

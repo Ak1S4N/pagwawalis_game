@@ -762,6 +762,10 @@ text = "Start Main Game"
 layout_mode = 2
 text = "Start Tutorial (!)"
 
+[node name="settings" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
 [node name="quit" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit Game
@@ -855,9 +859,11 @@ size_flags_stretch_ratio = 0.25
 stream = ExtResource("4_c72lq")
 volume_db = -15.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/main_game" to="." method="_on_main_game_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/settings" to="." method="_on_settings_button_up"]
 [connection signal="button_down" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/quit" to="." method="_on_quit_button_down"]
 [connection signal="text_changed" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer/name_edit" to="." method="_on_name_edit_text_changed"]
 [connection signal="toggled" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2/VBoxContainer/gender_edit" to="." method="_on_gender_edit_toggled"]

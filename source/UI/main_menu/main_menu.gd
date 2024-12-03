@@ -44,3 +44,7 @@ func _on_gender_edit_toggled(toggled_on: bool) -> void:
 		PlayerConditionals.gender_id = 0
 	else:
 		PlayerConditionals.gender_id = 1
+
+
+func _on_settings_button_up() -> void:
+	pass # Replace with function body.

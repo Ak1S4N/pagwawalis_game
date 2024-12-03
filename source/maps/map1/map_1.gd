@@ -30,8 +30,7 @@ func _physics_process(delta: float) -> void:
 	
 	if PlayerConditionals.map1_finished == false\
 	and PlayerConditionals.map1_score >= 5:
-		cutscene_manager.cutscene_2()
-		PlayerConditionals.map1_score = true
+		PlayerConditionals.map1_finished = true
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
