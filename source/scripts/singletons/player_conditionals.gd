@@ -5,8 +5,13 @@ var is_dialogue: bool = false
 var movement_tut_done: bool = false
 var get_out_of_tutorial: bool = false
 var score: int = 0
+
+#map1
 var map1_score: int = 0
 var map1_finished: bool = false
+
+#map2
+var map2_score: int = 0
 
 #player ids and all that
 var player_name: String

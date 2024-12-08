@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+#for tutorial
 signal not_done_yet(title)
 
 @onready var sprite_2d: Sprite2D = $Sprite2D

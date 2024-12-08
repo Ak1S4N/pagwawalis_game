@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="2_pnfj6"]
 [ext_resource type="FontFile" uid="uid://cukq56dfcji1i" path="res://assets/fonts/PressStart2P.ttf" id="3_ielpu"]
 [ext_resource type="AudioStream" uid="uid://cm6whouxpkxd8" path="res://assets/audios/bgm/Echoes of Tomorrow.mp3" id="4_c72lq"]
-[ext_resource type="Texture2D" uid="uid://no13se4kbcma" path="res://assets/objects/boy_icon.png" id="5_a7xln"]
+[ext_resource type="Texture2D" uid="uid://no13se4kbcma" path="res://assets/tileset/actors/player/boy_icon.png" id="5_a7xln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqrvl"]
 texture = ExtResource("1_e4ft0")
