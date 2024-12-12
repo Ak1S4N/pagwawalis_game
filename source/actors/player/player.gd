@@ -8,6 +8,8 @@ var input_dir: Vector2
 @export var tile_size: float = 16
 var is_moving: bool = false
 
+@export var target_position: int
+
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var animation_manager: AnimationManager = $animation_manager
@@ -38,10 +40,10 @@ func _physics_process(delta: float) -> void:
 
 func move():
 	if input_dir:
-		ray_cast_2d.target_position = input_dir * Vector2(32,32)
+		ray_cast_2d.target_position = input_dir * Vector2(target_position,target_position)
 		animation_manager.looking_at = input_dir
 		if ray_cast_2d.get_collider()\
-			and (input_dir * Vector2(32,32)) == ray_cast_2d.target_position:
+			and (input_dir * Vector2(target_position,target_position)) == ray_cast_2d.target_position:
 				return
 		elif not ray_cast_2d.get_collider():
 			if is_moving == false:

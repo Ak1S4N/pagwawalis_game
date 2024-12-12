@@ -343,6 +343,7 @@ graph_offset = Vector2(-131, -94.3369)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_w18ap")
+target_position = 16
 
 [node name="interact_manager" type="Node" parent="." node_paths=PackedStringArray("animation_man")]
 script = ExtResource("2_qw35i")
