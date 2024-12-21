@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqdvufcjunpk2"]
+
+[ext_resource type="Script" path="res://source/scripts/classes/enemy.gd" id="1_rqle1"]
+[ext_resource type="Script" path="res://source/scripts/classes/health_man.gd" id="2_awdpy"]
+[ext_resource type="Texture2D" uid="uid://d3dkq1dk3ftxj" path="res://icon.svg" id="2_lp3vj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnmx7"]
+size = Vector2(32, 32)
+
+[node name="train_enemy" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["enemy"]]
+script = ExtResource("1_rqle1")
+health_manager = NodePath("HealthManager")
+
+[node name="HealthManager" type="Node" parent="."]
+script = ExtResource("2_awdpy")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_lp3vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gnmx7")
