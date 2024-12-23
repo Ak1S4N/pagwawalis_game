@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="pagwawalis_game"
+config/tags=PackedStringArray("commission")
 run/main_scene="res://source/UI/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
@@ -22,6 +23,7 @@ PlayerConditionals="*res://source/scripts/singletons/player_conditionals.gd"
 Transitions="*res://source/scripts/singletons/transitions.tscn"
 Cutscenes="*res://source/scripts/singletons/cutscenes.gd"
 Quests="*res://source/scripts/singletons/quests.gd"
+MinigameSettings="*res://source/scripts/singletons/minigame_settings.gd"
 
 [display]
 
@@ -76,7 +78,7 @@ attack={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://source/actors/npc/police/first_meetup.dialogue", "res://source/actors/npc/police/police.dialogue", "res://source/actors/npc/police_commando/police_commando.dialogue", "res://source/actors/player/player.dialogue", "res://source/actors/npc/old_man/old_man.dialogue", "res://source/actors/npc/kid_lary/kid_lary.dialogue", "res://source/actors/npc/environmentalist_janna/environmentalist_janna.dialogue", "res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue", "res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue", "res://source/actors/inter_objects/bus/bus.dialogue", "res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.dialogue", "res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.dialogue", "res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue", "res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue")
+locale/translations_pot_files=PackedStringArray("res://source/actors/npc/police/first_meetup.dialogue", "res://source/actors/npc/police/police.dialogue", "res://source/actors/npc/police_commando/police_commando.dialogue", "res://source/actors/player/player.dialogue", "res://source/actors/npc/old_man/old_man.dialogue", "res://source/actors/npc/kid_lary/kid_lary.dialogue", "res://source/actors/npc/environmentalist_janna/environmentalist_janna.dialogue", "res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue", "res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue", "res://source/actors/inter_objects/bus/bus.dialogue", "res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.dialogue", "res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.dialogue", "res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue", "res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue", "res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.dialogue")
 
 [rendering]
 

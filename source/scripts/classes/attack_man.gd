@@ -9,12 +9,9 @@ var current_enemy: EnemyAI
 
 var can_attack: bool = true
 
-func _process(delta: float) -> void:
-	deal_damage()
-
 func deal_damage() -> void:
 	if can_attack:
-		if Input.is_action_just_pressed("attack") and current_enemy:
+		if current_enemy:
 			current_enemy.deal_damage(damage)
 			can_attack = false
 

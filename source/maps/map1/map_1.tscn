@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3n8lcj8njqn" path="res://source/UI/player_UI/player_ui.tscn" id="17_2wgub"]
 [ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ai382"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52ftn"]
 texture = ExtResource("1_c7s47")
 23:14/0 = 0
 19:21/size_in_atlas = Vector2i(4, 5)
@@ -97,7 +97,7 @@ texture = ExtResource("1_c7s47")
 8:29/0 = 0
 8:28/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxe2d"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26tm3"]
 texture = ExtResource("2_qkbwn")
 8:5/0 = 0
 8:5/0/terrain_set = 0
@@ -377,7 +377,7 @@ texture = ExtResource("2_qkbwn")
 6:85/0/terrains_peering_bit/top_left_corner = 2
 6:85/0/terrains_peering_bit/top_side = 2
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hr0c3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dd58t"]
 texture = ExtResource("5_f1wmb")
 20:19/0 = 0
 17:17/size_in_atlas = Vector2i(3, 2)
@@ -412,9 +412,9 @@ terrain_set_0/terrain_1/name = "road"
 terrain_set_0/terrain_1/color = Color(0.355644, 0.389006, 0.397928, 1)
 terrain_set_0/terrain_2/name = "side_walk"
 terrain_set_0/terrain_2/color = Color(0.660367, 0.758215, 0.860591, 1)
-sources/0 = SubResource("TileSetAtlasSource_ai382")
-sources/1 = SubResource("TileSetAtlasSource_dxe2d")
-sources/2 = SubResource("TileSetAtlasSource_hr0c3")
+sources/0 = SubResource("TileSetAtlasSource_52ftn")
+sources/1 = SubResource("TileSetAtlasSource_26tm3")
+sources/2 = SubResource("TileSetAtlasSource_dd58t")
 
 [sub_resource type="Animation" id="Animation_h44vd"]
 length = 0.001

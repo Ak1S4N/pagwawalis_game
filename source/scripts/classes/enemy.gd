@@ -1,14 +1,12 @@
 extends CharacterBody2D
 class_name EnemyAI
 
-@export var health_manager: HealthManager
+signal self_damaged
 
-func _ready() -> void:
-	health_manager.occur_death.connect(self_delete)
-	
+@export var health_manager: HealthManager
+var is_damaged: bool = false
 
 func deal_damage(damage: int) -> void:
-	health_manager.get_damage(damage)
-
-func self_delete() -> void:
-	self.queue_free()
+	if not is_damaged:
+		health_manager.get_damage(damage) 
+		emit_signal("self_damaged")

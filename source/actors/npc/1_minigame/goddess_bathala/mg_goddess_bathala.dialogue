@@ -1,0 +1,17 @@
+~ start_mini_1
+Goddess Bathala: Oh! Hey there!
+Goddess Bathala: Well, if you're wondering where you are suddenly...
+Goddess Bathala: This is a mini-game!
+- Oh... So what am I going to do here?
+Goddess Bathala: Well, you're here to clean as much trashes as you need!
+- Wow... Sounds easy enough.
+Goddess Bathala: BUT!
+Goddess Bathala: Unfortunately, these "trashes" can... move.
+- HUH!??
+Goddess Bathala: Don't worry! I'll teach you how to fight!
+Press... W, A, S, D to Move!
+And press... K to Attack!
+Goddess Bathala: Your mission for today is to CLEAN 10 TRASH SLIMES!
+Goddess Bathala: Good Luck!
+set MinigameSettings.minigame_start()
+=> END
