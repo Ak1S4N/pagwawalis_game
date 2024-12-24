@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d4i0g34jkoemj" path="res://assets/tileset/actors/enemies/trash_boss.png" id="2_ljovu"]
 [ext_resource type="Script" path="res://source/actors/enemies/trash_boss/animation_manager.gd" id="3_i77qo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iij8v"]
-size = Vector2(155, 87)
+[sub_resource type="CircleShape2D" id="CircleShape2D_56emc"]
+radius = 93.094
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kcjt"]
 size = Vector2(148, 60)
@@ -108,9 +108,14 @@ script = ExtResource("2_3ixca")
 [node name="AnimationManager" type="Node" parent="."]
 script = ExtResource("3_i77qo")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -20.5)
-shape = SubResource("RectangleShape2D_iij8v")
+position = Vector2(0, -70)
+shape = SubResource("CircleShape2D_56emc")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -131,5 +136,7 @@ libraries = {
 }
 autoplay = "idle"
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

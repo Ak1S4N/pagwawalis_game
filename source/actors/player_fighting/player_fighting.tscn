@@ -469,7 +469,7 @@ _data = {
 "walk_right": SubResource("Animation_hk0ek")
 }
 
-[node name="player_fighting" type="CharacterBody2D"]
+[node name="player_fighting" type="CharacterBody2D" groups=["figher", "fighter"]]
 z_index = 1
 script = ExtResource("1_4la4e")
 speed = 200.0
