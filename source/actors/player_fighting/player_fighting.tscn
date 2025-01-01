@@ -1,9 +1,47 @@
-[gd_scene load_steps=44 format=3 uid="uid://dvbdiuxk4fgdr"]
+[gd_scene load_steps=48 format=3 uid="uid://dvbdiuxk4fgdr"]
 
 [ext_resource type="Script" path="res://source/actors/player_fighting/player_fighting.gd" id="1_4la4e"]
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="1_ptxyl"]
 [ext_resource type="Script" path="res://source/actors/player_fighting/animation_man.gd" id="2_86dqb"]
 [ext_resource type="Script" path="res://source/scripts/classes/attack_man.gd" id="2_iiaea"]
+[ext_resource type="Script" path="res://source/scripts/classes/health_man.gd" id="2_n0ykg"]
+
+[sub_resource type="Animation" id="Animation_vro5r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sve6j"]
+resource_name = "damaged"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(100, 100, 100, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bml6i"]
+_data = {
+"RESET": SubResource("Animation_vro5r"),
+"damaged": SubResource("Animation_sve6j")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xh6ve"]
 radius = 8.0
@@ -469,10 +507,15 @@ _data = {
 "walk_right": SubResource("Animation_hk0ek")
 }
 
-[node name="player_fighting" type="CharacterBody2D" groups=["figher", "fighter"]]
+[node name="player_fighting" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["figher", "fighter"]]
 z_index = 1
 script = ExtResource("1_4la4e")
 speed = 200.0
+health_manager = NodePath("HealthManager")
+
+[node name="HealthManager" type="Node" parent="."]
+script = ExtResource("2_n0ykg")
+health = 18
 
 [node name="attack_man" type="Node" parent="." node_paths=PackedStringArray("animation_man")]
 script = ExtResource("2_iiaea")
@@ -490,6 +533,11 @@ texture = ExtResource("1_ptxyl")
 hframes = 56
 vframes = 20
 frame = 784
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="charactersprite"]
+libraries = {
+"": SubResource("AnimationLibrary_bml6i")
+}
 
 [node name="attacK_sprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -523,5 +571,6 @@ libraries = {
 "": SubResource("AnimationLibrary_ioth0")
 }
 
+[connection signal="animation_finished" from="charactersprite/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="attack_area" to="attack_man" method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="attack_area" to="attack_man" method="_on_attack_area_body_exited"]

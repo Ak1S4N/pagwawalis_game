@@ -1,7 +1,7 @@
 extends Node
 
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
-@onready var trash_boss: MG2Boss = $".."
+@onready var trash_boss: CharacterBody2D = $".."
 
 func _process(delta: float) -> void:
 	match trash_boss.current_state:

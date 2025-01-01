@@ -7,13 +7,15 @@ enum states {
 	IDLE,
 	WALKING,
 	ATTACKING,
-	TAKING_DAMAGE
+	DAMAGED
 }
 
 var current_state = states.IDLE
 var direction := Vector2.ZERO
 @export var can_move: bool = true
+@export var health_manager: HealthManager
 
+@onready var animation_player: AnimationPlayer = $charactersprite/AnimationPlayer
 
 func _physics_process(delta: float) -> void:
 	direction = Vector2.ZERO
@@ -34,3 +36,13 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * Vector2(speed, speed)
 	
 	move_and_slide()
+
+func deal_damage(damage: int) -> void:
+	health_manager.get_damage(damage)
+	current_state = states.DAMAGED
+	animation_player.play('damaged')
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == 'damaged':
+		current_state = states.IDLE

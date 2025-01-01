@@ -5,9 +5,10 @@ class_name AttackManager
 
 @export var animation_man: Node
 
-var current_enemy: EnemyAI
+var current_enemy: CharacterBody2D
 
 var can_attack: bool = true
+
 
 func deal_damage() -> void:
 	if can_attack:
