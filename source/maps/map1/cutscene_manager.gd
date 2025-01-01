@@ -15,6 +15,3 @@ func cutscene_1() -> void:
 func cutscene_2() -> void:
 	play("cut_2")
 	Transitions.fade_into("res://source/UI/main_menu/main_menu.tscn")
-
-func cutscene_2_2() -> void:
-	

@@ -13,11 +13,11 @@ do PlayerConditionals.is_dialogue = false
 => END
 
 ~ start_2
-set Cutscenes.mg_cut_2()
+set Cutscenes.mg2_cut_1()
 You: A forest!
 You: This is the most important part for the livelihood of the planet!
 You: Wait... I can feel something in my backpack...
 - Grab what's inside the backpack
 You: Seeds!!! I can plant flowers with this!
-set Cutscenes.mg_cut_2_2()
+set Cutscenes.mg2_cut_2()
 => END
