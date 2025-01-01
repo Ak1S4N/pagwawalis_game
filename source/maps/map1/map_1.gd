@@ -51,4 +51,4 @@ func show_trash(id: int) -> void:
 			mis_5.visible = true
 
 func back_to_menu() -> void:
-	Transitions.fade_into("res://source/UI/main_menu/main_menu.tscn")
+	Transitions.fade_into("res://source/maps/minigame_1/minigame_1.tscn")

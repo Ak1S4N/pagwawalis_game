@@ -823,9 +823,10 @@ sources/0 = SubResource("TileSetAtlasSource_4xy75")
 sources/1 = SubResource("TileSetAtlasSource_j83pi")
 sources/2 = SubResource("TileSetAtlasSource_14mn3")
 
-[node name="map_2" type="Node2D"]
+[node name="map_2" type="Node2D" node_paths=PackedStringArray("dialogue_sub")]
 y_sort_enabled = true
 script = ExtResource("1_7mumy")
+dialogue_sub = NodePath("dialogue_sub_manager")
 
 [node name="dialogue_sub_manager" type="Node" parent="."]
 script = ExtResource("1_yd7y6")
@@ -972,8 +973,19 @@ polygon = PackedVector2Array(32, 992, 32, 1024, 0, 1024, 0, 0, 1280, 0, 1280, 10
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("7_xpjr0")]
 visible = false
 
+[node name="animated_UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_qs7bu")
 volume_db = -11.145
 autoplay = true
 bus = &"Music"
+
+[node name="CutsceneManager" type="AnimationPlayer" parent="."]

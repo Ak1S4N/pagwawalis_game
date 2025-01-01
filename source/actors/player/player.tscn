@@ -377,6 +377,6 @@ autoplay = "idle_front"
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_d8m7g")
 anim_player = NodePath("../AnimationPlayer")
-parameters/grab/blend_position = Vector2(0.855326, 0)
-parameters/idle/blend_position = Vector2(-0.462639, 0.159292)
-parameters/walk/blend_position = Vector2(-0.103339, 0.391481)
+parameters/grab/blend_position = Vector2(0.00158978, 0.925532)
+parameters/idle/blend_position = Vector2(-0.00158983, 0.946808)
+parameters/walk/blend_position = Vector2(-0.00158983, 0.904255)

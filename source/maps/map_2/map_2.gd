@@ -8,7 +8,10 @@ extends Node2D
 @onready var mis_4: Node2D = $mis_list/mis4
 @onready var mis_5: Node2D = $mis_list/mis5
 
+@export var dialogue_sub: DialogueSubManager
+
 func _ready() -> void:
+	dialogue_sub.player_dial('start_2')
 	Quests.open_mission_2.connect(open_mission)
 	PlayerConditionals.movement_tut_done = true
 
