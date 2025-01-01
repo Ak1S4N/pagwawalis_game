@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var pause_menu: PausedMenu = $CanvasLayer/pause_menu
+@onready var cutscene_manager: AnimationPlayer = $CutsceneManager
 
 @onready var mis_1: Node2D = $mis_list/mis1
 @onready var mis_2: Node2D = $mis_list/mis2
@@ -10,9 +11,12 @@ extends Node2D
 
 @export var dialogue_sub: DialogueSubManager
 
+
 func _ready() -> void:
 	dialogue_sub.player_dial('start_2')
 	Quests.open_mission_2.connect(open_mission)
+	Cutscenes.mg2_cutscene_1.connect(cutscene_manager.cutscene_1)
+	Cutscenes.mg2_cutscene_2.connect(cutscene_manager.cutscene_2)
 	PlayerConditionals.movement_tut_done = true
 
 func _input(event: InputEvent) -> void:

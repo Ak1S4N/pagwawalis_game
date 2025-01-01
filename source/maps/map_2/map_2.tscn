@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bu3duenkeo0qn"]
+[gd_scene load_steps=23 format=4 uid="uid://bu3duenkeo0qn"]
 
 [ext_resource type="Script" path="res://source/maps/map_2/map_2.gd" id="1_7mumy"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_d2v6o"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_6f0k5"]
 [ext_resource type="PackedScene" uid="uid://dq6codrgpahjg" path="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.tscn" id="9_iqaya"]
 [ext_resource type="PackedScene" uid="uid://cmn4h00tgpqio" path="res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.tscn" id="10_cta5a"]
+[ext_resource type="Texture2D" uid="uid://bhfec6usel1sf" path="res://assets/objects/seed_bag.png" id="13_gywht"]
+[ext_resource type="Texture2D" uid="uid://b1mqmjx7hmbf5" path="res://assets/objects/bg_rays_for_ecoguardian.png" id="13_llj68"]
 [ext_resource type="Script" path="res://source/maps/map_2/cutscene_manager.gd" id="14_ns46h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sanon"]
@@ -982,6 +984,43 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/animated_UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -56.5
+offset_right = 100.0
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+pivot_offset = Vector2(95.2593, 57.6852)
+texture = ExtResource("13_llj68")
+
+[node name="seed_bag" type="TextureRect" parent="CanvasLayer/animated_UI"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -29.0
+offset_right = 21.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6, 6)
+pivot_offset = Vector2(22.6875, 27.125)
+texture = ExtResource("13_gywht")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_qs7bu")
