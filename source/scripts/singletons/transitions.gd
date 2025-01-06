@@ -12,3 +12,9 @@ func fade_to_exit() -> void:
 	animation_player.play("fade")
 	await animation_player.animation_finished
 	get_tree().quit()
+
+func fade_to_reload() -> void:
+	animation_player.play("fade")
+	await animation_player.animation_finished
+	get_tree().reload_current_scene()
+	animation_player.play_backwards("fade")

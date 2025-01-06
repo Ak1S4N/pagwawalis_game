@@ -515,10 +515,11 @@ health_manager = NodePath("HealthManager")
 
 [node name="HealthManager" type="Node" parent="."]
 script = ExtResource("2_n0ykg")
-health = 18
+health = 5
 
 [node name="attack_man" type="Node" parent="." node_paths=PackedStringArray("animation_man")]
 script = ExtResource("2_iiaea")
+damage = 1
 animation_man = NodePath("../animation_man")
 
 [node name="animation_man" type="Node" parent="." node_paths=PackedStringArray("player_fighting", "attack_manager")]

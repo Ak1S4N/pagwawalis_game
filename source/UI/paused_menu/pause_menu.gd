@@ -1,6 +1,7 @@
 extends Control
 class_name PausedMenu
 
+signal game_resumed
 
 @onready var music_vol: HSlider = $settings/VBoxContainer/music_vol
 @onready var sfx_volume: HSlider = $settings/VBoxContainer/sfx_volume
@@ -13,6 +14,7 @@ func _ready() -> void:
 
 func _on_resume_game_button_up() -> void:
 	visible = false
+	emit_signal("game_resumed")
 
 
 func _on_main_menu_button_up() -> void:

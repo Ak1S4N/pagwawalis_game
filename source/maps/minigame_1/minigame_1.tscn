@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://s257q4k14wyq"]
+[gd_scene load_steps=18 format=4 uid="uid://s257q4k14wyq"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_gddq2"]
 [ext_resource type="Script" path="res://source/maps/minigame_1/minigame_1.gd" id="1_pljei"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvbdiuxk4fgdr" path="res://source/actors/player_fighting/player_fighting.tscn" id="5_d435b"]
 [ext_resource type="PackedScene" uid="uid://b48b68clrvqcl" path="res://source/actors/enemies/trash_slime/trash_slime.tscn" id="6_x1mkp"]
 [ext_resource type="PackedScene" uid="uid://k6gkt8jqoqym" path="res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.tscn" id="7_rg2oa"]
+[ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="8_35n2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrx5k"]
 texture = ExtResource("1_gddq2")
@@ -878,3 +879,27 @@ player = NodePath("../player_fighting")
 [node name="trash_slime4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
 position = Vector2(2016, 1280)
 player = NodePath("../player_fighting")
+
+[node name="trash_slime5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(1872, 1408)
+player = NodePath("../player_fighting")
+
+[node name="trash_slime6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(1920, 1072)
+player = NodePath("../player_fighting")
+
+[node name="trash_slime7" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(1696, 1088)
+player = NodePath("../player_fighting")
+
+[node name="trash_slime8" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(1808, 1056)
+player = NodePath("../player_fighting")
+
+[node name="trash_slime9" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(2224, 1200)
+player = NodePath("../player_fighting")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("8_35n2x")]

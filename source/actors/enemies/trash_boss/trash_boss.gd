@@ -23,8 +23,6 @@ var being_damaged: bool = false
 func _ready() -> void:
 	self_damaged.connect(damaged_anim)
 
-
-
 func slash_attack() -> void:
 	if player_in:
 		player_in.deal_damage(damage)
@@ -49,6 +47,9 @@ func damaged_anim() -> void:
 	if not is_damaged:
 		animation_player.play("damaged")
 		
+
+func start_timer() -> void:
+	timer.start()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('fighter'):

@@ -15,3 +15,18 @@ Goddess Bathala: Your mission for today is to CLEAN 10 TRASH SLIMES!
 Goddess Bathala: Good Luck!
 set MinigameSettings.minigame_start()
 => END
+
+~ start_mini_2
+Goddess Bathala: Oh wow! We've met again!
+Goddess Bathala: Well, this time, I am not going to ask for help about planting plants hihi.
+Goddess Bathala: Instead, fight this guy!
+- T-That 'guy' is HUGE!
+Goddess Bathala: Oh come on!
+Goddess Bathala: Just a little favor for the goddess here? Besides, this huge monster here ruins the forest with trashes!
+Goddess Bathala: Just help me clean this for me.
+- I-I guess so...
+- Well, bring it on!
+Goddess Bathala: That's the spirit!
+Goddess Bathala: Good luck!
+set MinigameSettings.minigame_start()
+=> END

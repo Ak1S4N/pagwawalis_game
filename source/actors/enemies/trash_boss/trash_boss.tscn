@@ -156,10 +156,12 @@ _data = {
 
 [node name="trash_boss" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["enemy"]]
 script = ExtResource("1_dledw")
+damage = 1
 health_manager = NodePath("HealthManager")
 
 [node name="HealthManager" type="Node" parent="."]
 script = ExtResource("2_3ixca")
+health = 12
 
 [node name="AnimationManager" type="Node" parent="."]
 script = ExtResource("3_i77qo")
@@ -167,7 +169,6 @@ script = ExtResource("3_i77qo")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -70)

@@ -3,7 +3,7 @@ extends Area2D
 var direction: Vector2
 var speed: float = 3
 var rotate_speed: float = 0.2
-var damage = 3
+var damage = 1
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
