@@ -762,6 +762,10 @@ text = "Start Main Game"
 layout_mode = 2
 text = "Start Tutorial (!)"
 
+[node name="MiniGames" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mini Games"
+
 [node name="settings" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
@@ -855,6 +859,58 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
 
+[node name="Panel3" type="Panel" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -116.0
+offset_right = 80.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="minigame_1" type="Button" parent="CanvasLayer/Control/Panel3/VBoxContainer"]
+layout_mode = 2
+text = "Mini Game 1"
+
+[node name="minigame_2" type="Button" parent="CanvasLayer/Control/Panel3/VBoxContainer"]
+layout_mode = 2
+text = "Mini Game 2"
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -100.0
+offset_right = 46.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mini Games"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_c72lq")
 volume_db = -15.0
@@ -863,7 +919,10 @@ bus = &"Music"
 
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/main_game" to="." method="_on_main_game_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/tutorial" to="." method="_on_tutorial_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/MiniGames" to="." method="_on_mini_games_button_up"]
 [connection signal="button_up" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/settings" to="." method="_on_settings_button_up"]
 [connection signal="button_down" from="CanvasLayer/Control/Panel/VBoxContainer/HBoxContainer/VBoxContainer/quit" to="." method="_on_quit_button_down"]
 [connection signal="text_changed" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer/name_edit" to="." method="_on_name_edit_text_changed"]
 [connection signal="toggled" from="CanvasLayer/Control/Panel2/VBoxContainer/HBoxContainer2/VBoxContainer/gender_edit" to="." method="_on_gender_edit_toggled"]
+[connection signal="button_up" from="CanvasLayer/Control/Panel3/VBoxContainer/minigame_1" to="." method="_on_minigame_1_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/Panel3/VBoxContainer/minigame_2" to="." method="_on_minigame_2_button_up"]

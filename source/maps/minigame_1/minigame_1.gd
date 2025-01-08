@@ -16,6 +16,11 @@ func start_minigame() -> void:
 		if i.has_method("timer_start"):
 			i.timer_start()
 
+func _process(delta: float) -> void:
+	if MinigameSettings.minigame_1_score >= 10:
+		MinigameSettings.minigame_1_score = 0
+		Transitions.fade_into("res://source/maps/map_2/map_2.tscn")
+
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
-		pause_menu.visible = true
+		pause_menu.visible = !pause_menu.visible

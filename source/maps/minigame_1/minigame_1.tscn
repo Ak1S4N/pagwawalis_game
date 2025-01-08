@@ -903,3 +903,4 @@ player = NodePath("../player_fighting")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("8_35n2x")]
+visible = false

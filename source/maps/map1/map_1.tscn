@@ -730,6 +730,7 @@ polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328,
 visible = false
 
 [node name="player_ui" parent="CanvasLayer" node_paths=PackedStringArray("player", "tilemap") instance=ExtResource("17_2wgub")]
+visible = false
 player = NodePath("../../player")
 tilemap = NodePath("../../map_layer/dirt")
 
