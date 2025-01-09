@@ -8,6 +8,7 @@ Teenager Johnny: Thank you, Sir!
 do PlayerConditionals.is_dialogue = false
 set Quests.open_mis_old_man(5)
 set Quests.set_teenager_johnny(2)
+=> END
 
 ~ quest_done
 Teenager Johnny: Wowiee!

@@ -55,6 +55,7 @@ func damaged_animation() -> void:
 	current_state = states.IDLE
 
 func self_death() -> void:
+	MinigameSettings.minigame_1_score += 1
 	current_state = states.DAMAGED
 	hit_anim_player.play("damaged")
 	await hit_anim_player.animation_finished

@@ -190,6 +190,7 @@ health_manager = NodePath("HealthManager")
 
 [node name="HealthManager" type="Node" parent="."]
 script = ExtResource("1_hmhql")
+health = 1
 
 [node name="AnimationManager" type="Node" parent="."]
 script = ExtResource("3_q61qc")
