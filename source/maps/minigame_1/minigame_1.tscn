@@ -909,4 +909,5 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_lwi44")
 volume_db = -10.0
+autoplay = true
 bus = &"Music"

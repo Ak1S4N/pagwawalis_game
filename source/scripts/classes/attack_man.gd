@@ -5,7 +5,7 @@ class_name AttackManager
 
 @export var animation_man: Node
 
-var current_enemy: Array[EnemyAI]
+var current_enemy: Array[CharacterBody2D]
 
 var can_attack: bool = true
 
@@ -25,4 +25,5 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("enemy") and current_enemy.has(body):
-		current_enemy.erase(current_enemy[body])
+		MinigameSettings.minigame_1_score += 1
+		current_enemy.erase(body)

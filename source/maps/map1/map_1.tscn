@@ -526,7 +526,7 @@ texture_filter = 1
 position = Vector2(1792, 944)
 texture = ExtResource("3_qpw66")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="bus"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="bus"]
 stream = ExtResource("6_v6si1")
 volume_db = -12.17
 autoplay = true

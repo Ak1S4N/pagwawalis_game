@@ -1,4 +1,7 @@
 extends Node2D
+class_name Map2
+
+@onready var actors = get_tree().get_nodes_in_group("actors")
 
 @onready var pause_menu: PausedMenu = $CanvasLayer/pause_menu
 @onready var cutscene_manager: AnimationPlayer = $CutsceneManager
@@ -23,6 +26,16 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
 		pause_menu.visible = !pause_menu.visible
 	
+
+func _process(delta: float) -> void:
+	for actor in actors:
+		if PlayerConditionals.is_dialogue:
+			actor.set_physics_process(false)
+		else:
+			actor.set_physics_process(true)
+	
+	if PlayerConditionals.map2_score >= 5:
+		pass
 
 func open_mission(num: int) -> void:
 	match num:
