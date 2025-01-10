@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bu3duenkeo0qn"]
+[gd_scene load_steps=30 format=4 uid="uid://bu3duenkeo0qn"]
 
 [ext_resource type="Script" path="res://source/maps/map_2/map_2.gd" id="1_7mumy"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_d2v6o"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="2_mn0g0"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="3_g3lk3"]
 [ext_resource type="PackedScene" uid="uid://515y7pgnjn62" path="res://source/actors/player/player.tscn" id="4_6gfhc"]
+[ext_resource type="PackedScene" uid="uid://d3lj1kabfpd2k" path="res://source/actors/inter_objects/bus_2/bus_2.tscn" id="6_cx4yx"]
 [ext_resource type="PackedScene" uid="uid://dja0myw4o8tlr" path="res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.tscn" id="7_wyccu"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="7_xpjr0"]
 [ext_resource type="PackedScene" uid="uid://bew5d2d51o4c2" path="res://source/objects/pot/pot.tscn" id="8_5yjxv"]
@@ -13,9 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_6f0k5"]
 [ext_resource type="PackedScene" uid="uid://dq6codrgpahjg" path="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.tscn" id="9_iqaya"]
 [ext_resource type="PackedScene" uid="uid://cmn4h00tgpqio" path="res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.tscn" id="10_cta5a"]
+[ext_resource type="PackedScene" uid="uid://cy7fn377vwx40" path="res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.tscn" id="11_gb0bs"]
 [ext_resource type="Texture2D" uid="uid://bhfec6usel1sf" path="res://assets/objects/seed_bag.png" id="13_gywht"]
 [ext_resource type="Texture2D" uid="uid://b1mqmjx7hmbf5" path="res://assets/objects/bg_rays_for_ecoguardian.png" id="13_llj68"]
 [ext_resource type="Script" path="res://source/maps/map_2/cutscene_manager.gd" id="14_ns46h"]
+[ext_resource type="PackedScene" uid="uid://dxh0c4xidvkw6" path="res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.tscn" id="19_bg08p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sanon"]
 texture = ExtResource("1_d2v6o")
@@ -826,6 +829,143 @@ sources/0 = SubResource("TileSetAtlasSource_4xy75")
 sources/1 = SubResource("TileSetAtlasSource_j83pi")
 sources/2 = SubResource("TileSetAtlasSource_14mn3")
 
+[sub_resource type="Animation" id="Animation_b3sfm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/animated_UI/TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/animated_UI/seed_bag:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/animated_UI:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("bus2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(272, 256)]
+}
+
+[sub_resource type="Animation" id="Animation_xif13"]
+resource_name = "cut_1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/animated_UI/TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.471239]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/animated_UI/seed_bag:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(7.11, 7.11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/animated_UI:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qiul0"]
+resource_name = "cut_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bus2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 0.378929),
+"update": 0,
+"values": [Vector2(272, 256), Vector2(500, 256)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4ebl"]
+_data = {
+"RESET": SubResource("Animation_b3sfm"),
+"cut_1": SubResource("Animation_xif13"),
+"cut_2": SubResource("Animation_qiul0")
+}
+
 [node name="map_2" type="Node2D" node_paths=PackedStringArray("dialogue_sub")]
 y_sort_enabled = true
 script = ExtResource("1_7mumy")
@@ -861,6 +1001,11 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAAAAQAAAALAJcAAAAIAAQAAAALAJcAAAAQAAQAAAALAJcAAAAYAAQAAAALAJcAAAD4/wQAAAALAJcAAAAgAAQAAAALAJcAAAAoAAQAAAALAJcAAAAwAAQAAAALAJcAAAA4AAQAAAALAJcAAABAAAQAAAALAJcAAAD4//3/AAALAJcAAAAUAB4AAAAIAIMAAAAWAB8AAAAAAGwAAAAcABwAAAAAAGwAAAAgABsAAAARAE8AAAAiABwAAAAUAEIAAAAjACEAAAASADwAAAAhACIAAAAUAEIAAAAPAB8AAAAcADQAAAAsAB4AAAAcADQAAAAoACQAAAAcADQAAAAcABcAAAAcADQAAAAMACAAAAAUAEIAAAAKACEAAAASADwAAAAVACUAAAARAE8AAAAdACYAAAAUAFcAAAAZACcAAAAAAGwAAAAMACMAAAAIAIMAAAAnABwAAAAIAIMAAAArACMAAAARAE8AAAA0AB4AAAAUAFcAAAA2AB0AAAAAAGwAAAAXACgAAAAUAEIAAAAZACkAAAASADwAAAAgACgAAAARAE8AAAAeACkAAAAUAFcAAAAaACoAAAAIAIMAAAAWACkAAAAUAFcAAAAVACsAAAAIAIMAAAAgAC0AAAAAAGwAAAAbAC8AAAARAE8AAAAmACYAAAAUAFcAAAAmACgAAAAUAEIAAAAmACoAAAASADwAAAApACUAAAAAAGwAAAArACYAAAAIAIMAAAAuACIAAAAIAIMAAAAxACMAAAAAAGwAAAA2AB8AAAAUAFcAAAAgABwAAAAcADkAAAAVAB8AAAAaADkAAAAhACkAAAAbADkAAAARACUAAAADADUAAAAWABgAAAADADUAAAAiABcAAAADADUAAAAuAB0AAAADADUAAAAkACIAAAADADUAAAAdACcAAAAEADYAAAAoACYAAAAEADYAAAAvACMAAAAEADYAAAAPACUAAAASADwAAAAQACwAAAASADwAAAArACwAAAASADwAAAAwACUAAAASADwAAAA3ACMAAAASADwAAAA0ACYAAAASADwAAAALACQAAAAUAEIAAAAtABoAAAAUAEIAAAArABwAAAAUAEIAAAASABcAAAAUAEIAAAAOABgAAAAWADwAAAAoABgAAAAWADwAAAANACYAAAAWADwAAAAQACcAAAAWADwAAAAuABsAAAAWADwAAAAoACwAAAAWADwAAAA5ACUAAAAWADwAAAAkABcAAAAIADQAAAAkAC0AAAAIADQAAAANACkAAAAIADQAAAAJABUAAAAIADQAAAAVABYAAAARADQAAAApABUAAAARADQAAAAZABUAAAAcADkAAAA9ACgAAAAIADQAAABAACcAAAARAE8AAAA3ACQAAAARAE8AAAA1ACgAAAAUAFcAAAAyACUAAAAGAEgAAAAmAC4AAAARAEgAAAArADAAAAAUAFcAAAAnADAAAAASADwAAAAlAC8AAAAWADwAAAAkADEAAAAGAEgAAAAIACMAAAAUAFcAAAAMABcAAAAUAFcAAAAKABgAAAAUAFcAAAAHABYAAAARAE8AAAAIABsAAAAAAGwAAAAPABUAAAAAAGwAAAAqABcAAAAAAGwAAAAvABcAAAAUAFcAAAA6ACIAAAARAE8AAAA7ACAAAAAAAGwAAAAyABcAAAARAE8AAAAwABYAAAAAAGwAAAAqABkAAAARAEgAAAAuABUAAAARAEgAAAA1ABYAAAAGAEgAAAA3ABcAAAASADwAAAA0ABUAAAAUAEIAAAA4ABUAAAAUAFcAAAA+ABYAAAAGAEgAAABGABwAAAAGAEgAAAA9AC4AAAARAE8AAABEAC0AAAAUAFcAAABBACwAAAAAAGwAAAAxAC0AAAAIAIMAAAA/ACEAAAAIAIMAAAA6ABcAAAAIAIMAAAA7ABoAAAAUAEIAAAA6ABwAAAAIADQAAABEABsAAAARADQAAABEACIAAAAUAEIAAAA9ACIAAAAWADwAAABFAB4AAAAWADwAAABCABUAAAAWADwAAABEABcAAAAIADQAAABHAB4AAAARAE8AAABMAC0AAAARAE8AAABEADIAAAARAE8AAAA2ADMAAAARAE8AAAAwADUAAAARAE8AAAA0ADQAAAAUAFcAAAA2ADUAAAAAAGwAAABGADQAAAAAAGwAAABKAC8AAAAAAGwAAABJACgAAAAAAGwAAABGACMAAAAAAGwAAAAoADMAAAAAAGwAAAAsADQAAAAIAIMAAAAhADMAAAAIAIMAAAAMADIAAAAUAFcAAAAOADMAAAARAEgAAAAOADEAAAAWADwAAAAIACwAAAASADwAAAAKACkAAAASADwAAAAKAB0AAAASADwAAAAHAB8AAAARAE8AAAAKACYAAAARAE8AAAAHACgAAAARAE8AAAAEACwAAAARAE8AAAAEAC4AAAAUAFcAAAADADAAAAAAAGwAAAAHADkAAAAAAGwAAAAZADQAAAAAAGwAAAADADMAAAAIAIMAAAACADYAAAAAAGwAAAAFADkAAAAUAFcAAAALADkAAAARAE8AAAAOADgAAAARAEgAAAAQADoAAAAUAEIAAAASADgAAAARAE8AAAAUADkAAAAIAIMAAAAYADkAAAAUAFcAAAAfADUAAAAUAFcAAAAlADYAAAAUAFcAAAAxADgAAAAUAFcAAAAbADYAAAAIAIMAAAAiADUAAAASADwAAAArADUAAAASADwAAAAmADIAAAADADUAAAASACkAAAADADUAAABFACAAAAAEADYAAABHACAAAAAEADYAAAA0AB8AAAAEADYAAAAvAB4AAAAEADYAAAAxAC4AAAAEADYAAAA0AC4AAAAbADkAAAApADYAAAAWADwAAAAnADQAAAAcADQAAAAwABgAAAAcADQAAAAeACoAAAAcADkAAAA1ACIAAAAcADkAAAAuADUAAAAcADkAAAApADQAAAAcADkAAAAaADYAAAAcADkAAAAMACcAAAAcADkAAAAMACgAAAAFADYAAAAfABcAAAAFADYAAAA3ACUAAAAFADYAAAAzADMAAAAFADYAAAAlADMAAAAFADYAAABEADMAAAAFADYAAABGADUAAAAFADYAAABLADIAAAAFADYAAABLACoAAAAFADYAAABGAB8AAAAFADYAAABKACMAAAAEADYAAABJABoAAAAEADYAAABJACAAAAAIADQAAABIADUAAAAIADQAAAA5ADkAAAAIADQAAAA9ADgAAAAIADQAAABCADgAAAARADQAAAAeADgAAAARADQAAAAlADgAAAARADQAAAAtADkAAAARADQAAAAhADkAAAARADQAAAAqADoAAAARADQAAAAAAD8AAAALAJcAAAAIAD8AAAALAJcAAAAQAD8AAAALAJcAAAAYAD8AAAALAJcAAAAgAD8AAAALAJcAAAAoAD8AAAALAJcAAAAwAD8AAAALAJcAAAA4AD8AAAALAJcAAABAAD8AAAALAJcAAABIAD8AAAALAJcAAABQAD8AAAALAJcAAABIAAQAAAALAJcAAAA=")
 tile_set = SubResource("TileSet_qhncs")
 
+[node name="bus2" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("6_cx4yx")]
+z_index = 1
+position = Vector2(272, 256)
+dialogue_sub = NodePath("../dialogue_sub_manager")
+
 [node name="player" parent="." groups=["actors"] instance=ExtResource("4_6gfhc")]
 z_index = 1
 y_sort_enabled = true
@@ -885,6 +1030,14 @@ dialogue_sub = NodePath("../dialogue_sub_manager")
 
 [node name="economist_rebecca" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("9_iqaya")]
 position = Vector2(800, 416)
+dialogue_sub = NodePath("../dialogue_sub_manager")
+
+[node name="biology_student_aki" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("11_gb0bs")]
+position = Vector2(112, 736)
+dialogue_sub = NodePath("../dialogue_sub_manager")
+
+[node name="wandering_child_ryan" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("19_bg08p")]
+position = Vector2(672, 640)
 dialogue_sub = NodePath("../dialogue_sub_manager")
 
 [node name="mis_list" type="Node2D" parent="."]
@@ -962,8 +1115,48 @@ quest_master = NodePath("../../../economist_rebecca")
 [node name="mis4" type="Node2D" parent="mis_list"]
 visible = false
 
+[node name="pot" parent="mis_list/mis4" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(144, 752)
+quest_master = NodePath("../../../biology_student_aki")
+
+[node name="pot2" parent="mis_list/mis4" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(208, 720)
+quest_master = NodePath("../../../biology_student_aki")
+
+[node name="pot3" parent="mis_list/mis4" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(128, 832)
+quest_master = NodePath("../../../biology_student_aki")
+
+[node name="pot4" parent="mis_list/mis4" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(272, 736)
+quest_master = NodePath("../../../biology_student_aki")
+
+[node name="pot5" parent="mis_list/mis4" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(288, 784)
+quest_master = NodePath("../../../biology_student_aki")
+
 [node name="mis5" type="Node2D" parent="mis_list"]
 visible = false
+
+[node name="pot" parent="mis_list/mis5" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(784, 672)
+quest_master = NodePath("../../../wandering_child_ryan")
+
+[node name="pot2" parent="mis_list/mis5" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(736, 720)
+quest_master = NodePath("../../../wandering_child_ryan")
+
+[node name="pot3" parent="mis_list/mis5" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(816, 640)
+quest_master = NodePath("../../../wandering_child_ryan")
+
+[node name="pot4" parent="mis_list/mis5" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(656, 672)
+quest_master = NodePath("../../../wandering_child_ryan")
+
+[node name="pot5" parent="mis_list/mis5" node_paths=PackedStringArray("quest_master") instance=ExtResource("8_5yjxv")]
+position = Vector2(720, 640)
+quest_master = NodePath("../../../wandering_child_ryan")
 
 [node name="invs_wall" type="StaticBody2D" parent="."]
 
@@ -977,6 +1170,7 @@ polygon = PackedVector2Array(32, 992, 32, 1024, 0, 1024, 0, 0, 1280, 0, 1280, 10
 visible = false
 
 [node name="animated_UI" type="Control" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -986,7 +1180,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/animated_UI"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1004,7 +1197,6 @@ pivot_offset = Vector2(95.2593, 57.6852)
 texture = ExtResource("13_llj68")
 
 [node name="seed_bag" type="TextureRect" parent="CanvasLayer/animated_UI"]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1028,5 +1220,9 @@ volume_db = -11.145
 autoplay = true
 bus = &"Music"
 
-[node name="CutsceneManager" type="AnimationPlayer" parent="."]
+[node name="CutsceneManager" type="AnimationPlayer" parent="." node_paths=PackedStringArray("dsb")]
+libraries = {
+"": SubResource("AnimationLibrary_h4ebl")
+}
 script = ExtResource("14_ns46h")
+dsb = NodePath("../dialogue_sub_manager")

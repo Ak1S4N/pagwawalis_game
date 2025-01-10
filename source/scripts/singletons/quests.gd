@@ -17,6 +17,7 @@ var gardener_ryan: int = 1
 var goddess_bathala: int = 1
 var economist_rebecca:int = 1
 var biology_student_aki: int = 1
+var wandering_child_ryan: int = 1
 
 #main game part 1 here
 func set_old_man(value: int) -> void:
@@ -53,3 +54,6 @@ func set_economist_rebecca(id: int) -> void:
 
 func set_biology_student_aki(id: int) -> void:
 	biology_student_aki = id
+
+func set_wandering_child_ryan(id: int) -> void:
+	wandering_child_ryan = id

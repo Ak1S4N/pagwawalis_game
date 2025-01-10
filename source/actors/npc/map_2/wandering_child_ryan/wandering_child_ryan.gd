@@ -3,7 +3,7 @@ extends NPC
 @export var dialogue_sub: DialogueSubManager
 
 func interact() -> void:
-	if Quests.economist_rebecca == 1:
-		dialogue_sub.economist_rebecca_dial("quest_available")
-	elif Quests.economist_rebecca == 3:
-		dialogue_sub.economist_rebecca_dial("quest_done")
+	if Quests.wandering_child_ryan == 1:
+		dialogue_sub.wandering_child_ryan_dial("quest_available")
+	elif Quests.wandering_child_ryan == 3:
+		dialogue_sub.wandering_child_ryan_dial("quest_done")

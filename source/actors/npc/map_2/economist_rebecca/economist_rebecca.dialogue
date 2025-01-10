@@ -18,7 +18,7 @@ Economist Rebecca: Wowie! This whole place is clean!
 Economist Rebecca: I feel like I can breath fresh again!
 Economist Rebecca: May I know your name?
 - {{PlayerConditionals.player_name}}!
-Economist Rebecca: Thank you, {{PlayerConditionals.player+name}}!
+Economist Rebecca: Thank you, {{PlayerConditionals.player_name}}!
 Economist Rebecca: Hope we meet again soon! Please clean more places!
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map2_score += 1

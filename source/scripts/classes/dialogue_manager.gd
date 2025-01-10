@@ -20,7 +20,7 @@ const GARDENER_RYAN = preload("res://source/actors/npc/map_2/gardener_ryan/garde
 const ECONOMIST_REBECCA = preload("res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue")
 const GODDESS_BATHALA = preload("res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.dialogue")
 const BIOLOGY_STUDENT_AKI = preload("res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue")
-
+const WANDERING_CHILD_RYAN = preload("res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.dialogue")
 
 #tutorial
 func police_dial(title: String) -> void:
@@ -76,4 +76,8 @@ func economist_rebecca_dial(title: String) -> void:
 
 func biology_student_aki_dial(title: String) -> void:
 	DialogueManager.show_dialogue_balloon(BIOLOGY_STUDENT_AKI, title)
+	PlayerConditionals.is_dialogue = true
+
+func wandering_child_ryan_dial(title: String) -> void:
+	DialogueManager.show_dialogue_balloon(WANDERING_CHILD_RYAN, title)
 	PlayerConditionals.is_dialogue = true
