@@ -19,7 +19,7 @@ var direction := Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 	direction = Vector2.ZERO
-	current_state = states.IDLE	
+	current_state = states.IDLE
 	if can_move:
 		if Input.is_action_pressed("down"):
 			direction = Vector2.DOWN

@@ -901,6 +901,10 @@ player = NodePath("../player_fighting")
 position = Vector2(2224, 1200)
 player = NodePath("../player_fighting")
 
+[node name="trash_slime10" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_x1mkp")]
+position = Vector2(1664, 1504)
+player = NodePath("../player_fighting")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("8_35n2x")]

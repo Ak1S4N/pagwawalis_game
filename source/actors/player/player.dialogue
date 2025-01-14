@@ -1,9 +1,9 @@
 ~ start_1
 set Cutscenes.mg_cut_1()
-You: Here we are... 
-You: A new villa to clean
-You: Well, pretty ready to clean the whole world now, then!
-You: The police guy told me to talk to this OLD MAN. Maybe he's on a mission.
+{{PlayerConditionals.player_name}}: Here we are... 
+{{PlayerConditionals.player_name}}: A new villa to clean
+{{PlayerConditionals.player_name}}: Well, pretty ready to clean the whole world now, then!
+{{PlayerConditionals.player_name}}: The police guy told me to talk to this OLD MAN. Maybe he's on a mission.
 
 Press WASD to move and E to interact.
 Quest indicators here as follows, Blue for Quest Available, Yellow for Quest Ongoing, and Green for Quest Finished.
@@ -13,15 +13,15 @@ do PlayerConditionals.is_dialogue = false
 => END
 
 ~ start_2
-You: A forest!
-You: This is the most important part for the livelihood of the planet!
-You: Wait... I can feel something in my backpack...
+{{PlayerConditionals.player_name}}: A forest!
+{{PlayerConditionals.player_name}}: This is the most important part for the livelihood of the planet!
+{{PlayerConditionals.player_name}}: Wait... I can feel something in my backpack...
 - Grab what's inside the backpack
-You: Seeds!!! I can plant flowers with this!
+{{PlayerConditionals.player_name}}: Seeds!!! I can plant flowers with this!
 set Cutscenes.mg2_cut_1()
 => END
 
 ~ start_2_2
-You: Let's start planting with this!
+{{PlayerConditionals.player_name}}: Let's start planting with this!
 do PlayerConditionals.is_dialogue = false
 => END

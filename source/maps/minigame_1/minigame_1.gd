@@ -17,7 +17,7 @@ func start_minigame() -> void:
 			i.timer_start()
 
 func _process(delta: float) -> void:
-	if MinigameSettings.minigame_1_score >= 10:
+	if MinigameSettings.minigame_1_score >= 5:
 		print("whaaat")
 		MinigameSettings.minigame_1_score = 0
 		Transitions.fade_into("res://source/maps/map_2/map_2.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://o220dyhg1wxp"]
+[gd_scene load_steps=29 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
 [ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
@@ -17,7 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://3dxacguwwact" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.tscn" id="11_83xqc"]
 [ext_resource type="PackedScene" uid="uid://bqqns72eqta0r" path="res://source/actors/npc/adventurer_mic1/adventurer_michel_1.tscn" id="12_ph8q4"]
 [ext_resource type="PackedScene" uid="uid://b51sngcpu4mcb" path="res://source/actors/npc/teenager_johnny/teenager_johnny.tscn" id="13_b6slp"]
-[ext_resource type="PackedScene" uid="uid://bx3n8lcj8njqn" path="res://source/UI/player_UI/player_ui.tscn" id="17_2wgub"]
+[ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="17_iebsw"]
+[ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="17_usu0t"]
 [ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52ftn"]
@@ -729,10 +730,11 @@ polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328,
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("5_1wwvr")]
 visible = false
 
-[node name="player_ui" parent="CanvasLayer" node_paths=PackedStringArray("player", "tilemap") instance=ExtResource("17_2wgub")]
-visible = false
-player = NodePath("../../player")
-tilemap = NodePath("../../map_layer/dirt")
+[node name="score_UI" parent="CanvasLayer" instance=ExtResource("17_iebsw")]
+
+[node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers") instance=ExtResource("17_usu0t")]
+player = NodePath("../player")
+tilemap_layers = NodePath("../map_layer")
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
 libraries = {

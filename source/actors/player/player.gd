@@ -14,6 +14,17 @@ var is_moving: bool = false
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var animation_manager: AnimationManager = $animation_manager
 
+enum states {
+	IDLE,
+	WALKING,
+	ATTACKING,
+	DAMAGED
+}
+var current_state = states.IDLE
+
+@export var speed : float = 16
+var can_move: bool = true
+
 func _ready() -> void:
 	if PlayerConditionals.gender_id == 0:
 		sprite_2d.texture = MAIN_PLAYER_CLEANING_SIM
@@ -23,18 +34,25 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	input_dir = Vector2.ZERO
-	if Input.is_action_pressed("down"):
-		input_dir = Vector2.DOWN
-		move()
-	elif Input.is_action_pressed("up"):
-		input_dir = Vector2.UP
-		move()
-	elif Input.is_action_pressed("left"):
-		input_dir = Vector2.LEFT
-		move()
-	elif Input.is_action_pressed("right"):
-		input_dir = Vector2.RIGHT
-		move()
+	current_state = states.IDLE
+	if can_move:
+		if Input.is_action_pressed("down"):
+			input_dir = Vector2.DOWN
+			current_state = states.WALKING
+			rotate_raycast()
+		elif Input.is_action_pressed("up"):
+			input_dir = Vector2.UP
+			current_state = states.WALKING
+			rotate_raycast()
+		elif Input.is_action_pressed("left"):
+			input_dir = Vector2.LEFT
+			current_state = states.WALKING
+			rotate_raycast()
+		elif Input.is_action_pressed("right"):
+			input_dir = Vector2.RIGHT
+			current_state = states.WALKING
+			rotate_raycast()
+	velocity = input_dir * Vector2(speed, speed)
 	move_and_slide()
 
 
@@ -53,6 +71,9 @@ func move():
 					tween.tween_property(self, "position", position + (input_dir * tile_size), .2)
 					tween.tween_callback(move_false)
 
+func rotate_raycast():
+	ray_cast_2d.target_position = input_dir * Vector2(target_position,target_position)
+	
 
 func move_false():
 	animation_manager.idle_anim()
