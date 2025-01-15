@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://da5tm51oamvl4"]
+
+[ext_resource type="Texture2D" uid="uid://cift8ggeimqxr" path="res://assets/objects/trashcan.png" id="1_rhxpk"]
+
+[node name="Segregation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rhxpk")
+
+[node name="TrashContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 21.0
+offset_bottom = 141.0
+grow_horizontal = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bu3duenkeo0qn"]
+[gd_scene load_steps=33 format=4 uid="uid://bu3duenkeo0qn"]
 
 [ext_resource type="Script" path="res://source/maps/map_2/map_2.gd" id="1_7mumy"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_d2v6o"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dja0myw4o8tlr" path="res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.tscn" id="7_wyccu"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="7_xpjr0"]
 [ext_resource type="PackedScene" uid="uid://bew5d2d51o4c2" path="res://source/objects/pot/pot.tscn" id="8_5yjxv"]
+[ext_resource type="PackedScene" uid="uid://ddmi7pevk31sj" path="res://source/actors/player/npc_compass/npc_compass.tscn" id="8_fix5y"]
 [ext_resource type="AudioStream" uid="uid://dgnu71kn6nfl6" path="res://assets/audios/bgm/Fields of Gold.mp3" id="8_qs7bu"]
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_6f0k5"]
 [ext_resource type="PackedScene" uid="uid://dq6codrgpahjg" path="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.tscn" id="9_iqaya"]
@@ -1021,6 +1022,26 @@ limit_right = 1248
 limit_bottom = 992
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
+
+[node name="NPCCompass" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("8_fix5y")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../gardener_ryan")
+
+[node name="NPCCompass2" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("8_fix5y")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../goddess_bathala")
+
+[node name="NPCCompass3" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("8_fix5y")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../economist_rebecca")
+
+[node name="NPCCompass4" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("8_fix5y")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../biology_student_aki")
+
+[node name="NPCCompass5" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("8_fix5y")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../wandering_child_ryan")
 
 [node name="gardener_ryan" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_wyccu")]
 position = Vector2(384, 384)

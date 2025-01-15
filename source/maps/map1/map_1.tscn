@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://o220dyhg1wxp"]
+[gd_scene load_steps=30 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
 [ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://drg0b2on4u2m1" path="res://assets/audios/sfx/car_start_then_goes.mp3" id="6_v6si1"]
 [ext_resource type="PackedScene" uid="uid://dy8u048jg3e8" path="res://source/actors/npc/old_man/old_man.tscn" id="7_ot4sh"]
 [ext_resource type="Script" path="res://source/maps/map1/cutscene_manager.gd" id="8_lv3v3"]
+[ext_resource type="PackedScene" uid="uid://ddmi7pevk31sj" path="res://source/actors/player/npc_compass/npc_compass.tscn" id="9_l8hi7"]
 [ext_resource type="PackedScene" uid="uid://cvb3pqqncw67v" path="res://source/actors/npc/kid_lary/kid_lary.tscn" id="9_ugotv"]
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_v2cfe"]
 [ext_resource type="AudioStream" uid="uid://b5x2w4qgfs56" path="res://assets/audios/bgm/Campfire Tales.mp3" id="9_y3lc4"]
@@ -546,6 +547,26 @@ limit_right = 2272
 limit_bottom = 1600
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
+
+[node name="NPCCompass" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../evironmentalist_janna")
+
+[node name="NPCCompass2" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../old_man")
+
+[node name="NPCCompass3" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../kid_lary")
+
+[node name="NPCCompass4" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../teenager_johnny")
+
+[node name="NPCCompass5" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
+position = Vector2(8, 8)
+target_npc = NodePath("../../adventurer_michel_1")
 
 [node name="old_man" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_ot4sh")]
 z_index = 1
