@@ -22,6 +22,10 @@ const GODDESS_BATHALA = preload("res://source/actors/npc/map_2/goddess_bathala/g
 const BIOLOGY_STUDENT_AKI = preload("res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue")
 const WANDERING_CHILD_RYAN = preload("res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.dialogue")
 
+func _ready() -> void:
+	for i in get_tree().get_nodes_in_group("trashes"):
+		i.quest_not_obtained.connect(player_dial)
+
 #tutorial
 func police_dial(title: String) -> void:
 	DialogueManager.show_dialogue_balloon(POLICE, title)

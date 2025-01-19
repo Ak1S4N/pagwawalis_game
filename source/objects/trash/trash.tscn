@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_gruwf"]
 radius = 6.08276
 
-[node name="trash" type="StaticBody2D"]
+[node name="trash" type="StaticBody2D" groups=["trashes"]]
 script = ExtResource("1_rdou2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

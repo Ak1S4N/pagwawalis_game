@@ -4,7 +4,7 @@ extends Node
 @onready var sprite_2d_2: Sprite2D = $"../Sprite2D2"
 
 func _process(delta: float) -> void:
-	match Quests.adventurer_michel:
+	match Quests.map_1["adventurer_michel"]:
 		1:
 			sprite_2d_2.frame = 5
 		2:
@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 		3:
 			sprite_2d_2.frame = 2
 	
-	if quest_master.NPC_score > 4:
-		Quests.adventurer_michel = 3
+	if quest_master.NPC_score > 4 and Quests.map_1["adventurer_michel"] != 3:
+		Quests.map_1["adventurer_michel"] = 3

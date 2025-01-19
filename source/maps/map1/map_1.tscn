@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://o220dyhg1wxp"]
+[gd_scene load_steps=31 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
 [ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="17_iebsw"]
 [ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="17_usu0t"]
 [ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
+[ext_resource type="PackedScene" uid="uid://mn408nb3k1lo" path="res://source/UI/quest_banner_UI/quest_banner.tscn" id="19_i6t2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52ftn"]
 texture = ExtResource("1_c7s47")
@@ -550,7 +551,7 @@ position_smoothing_speed = 2.0
 
 [node name="NPCCompass" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../evironmentalist_janna")
+target_npc = NodePath("../../environmentalist_janna")
 
 [node name="NPCCompass2" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
@@ -579,7 +580,7 @@ z_index = 1
 position = Vector2(2032, 1072)
 dialogue_sub = NodePath("../dialogue_sub")
 
-[node name="evironmentalist_janna" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("11_83xqc")]
+[node name="environmentalist_janna" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("11_83xqc")]
 z_index = 1
 position = Vector2(1648, 992)
 dialogue_sub = NodePath("../dialogue_sub")
@@ -601,7 +602,6 @@ position = Vector2(1888, 1552)
 dialogue_sub = NodePath("../dialogue_sub")
 
 [node name="mis_1" type="Node2D" parent="."]
-visible = false
 
 [node name="trash" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
@@ -629,7 +629,6 @@ position = Vector2(1856, 1328)
 quest_master = NodePath("../../old_man")
 
 [node name="mis_2" type="Node2D" parent="."]
-visible = false
 
 [node name="trash6" parent="mis_2" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
@@ -657,35 +656,33 @@ position = Vector2(2128, 1120)
 quest_master = NodePath("../../kid_lary")
 
 [node name="mis_3" type="Node2D" parent="."]
-visible = false
 
 [node name="trash11" parent="mis_3" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1888, 912)
-quest_master = NodePath("../../evironmentalist_janna")
+quest_master = NodePath("../../environmentalist_janna")
 
 [node name="trash12" parent="mis_3" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2000, 944)
-quest_master = NodePath("../../evironmentalist_janna")
+quest_master = NodePath("../../environmentalist_janna")
 
 [node name="trash13" parent="mis_3" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2048, 1008)
-quest_master = NodePath("../../evironmentalist_janna")
+quest_master = NodePath("../../environmentalist_janna")
 
 [node name="trash14" parent="mis_3" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1904, 1024)
-quest_master = NodePath("../../evironmentalist_janna")
+quest_master = NodePath("../../environmentalist_janna")
 
 [node name="trash15" parent="mis_3" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1760, 1008)
-quest_master = NodePath("../../evironmentalist_janna")
+quest_master = NodePath("../../environmentalist_janna")
 
 [node name="mis_4" type="Node2D" parent="."]
-visible = false
 
 [node name="trash16" parent="mis_4" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
@@ -713,7 +710,6 @@ position = Vector2(2224, 1440)
 quest_master = NodePath("../../adventurer_michel_1")
 
 [node name="mis_5" type="Node2D" parent="."]
-visible = false
 
 [node name="trash21" parent="mis_5" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
@@ -753,9 +749,12 @@ visible = false
 
 [node name="score_UI" parent="CanvasLayer" instance=ExtResource("17_iebsw")]
 
-[node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers") instance=ExtResource("17_usu0t")]
+[node name="QuestBanner" parent="CanvasLayer" instance=ExtResource("19_i6t2f")]
+
+[node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers", "NPCS") instance=ExtResource("17_usu0t")]
 player = NodePath("../player")
 tilemap_layers = NodePath("../map_layer")
+NPCS = [NodePath("../old_man"), NodePath("../kid_lary"), NodePath("../environmentalist_janna"), NodePath("../adventurer_michel_1"), NodePath("../teenager_johnny")]
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
 libraries = {

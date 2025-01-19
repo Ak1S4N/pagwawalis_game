@@ -1,10 +1,23 @@
-[gd_scene format=3 uid="uid://b70pxq1k24mae"]
+[gd_scene load_steps=4 format=3 uid="uid://b70pxq1k24mae"]
 
-[node name="Trash" type="Panel"]
+[ext_resource type="Texture2D" uid="uid://f1t0c4vdu3r2" path="res://assets/objects/tileset/mga_basura.png" id="1_c7jid"]
+[ext_resource type="Script" path="res://source/UI/segregation_ui/trash/trash_container.gd" id="1_h0ib7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1614d"]
+atlas = ExtResource("1_c7jid")
+region = Rect2(32, 0, 16, 16)
+
+[node name="TrashContainer" type="PanelContainer"]
+z_index = 5
+z_as_relative = false
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_h0ib7")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sprite2D" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_1614d")
+expand_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

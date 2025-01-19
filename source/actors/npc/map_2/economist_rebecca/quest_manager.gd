@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 			sprite_2d_2.frame = 2
 	
 	if quest_master.NPC_score > 4:
-		Quests.economist_rebecca = 3
+		Quests.set_economist_rebecca(3)
