@@ -9,7 +9,7 @@ Old Man Andrew: Can you do that?
 - Well, that's why I am here!
 Old Man Andrew: Great! Great! Alright, please start now.
 do PlayerConditionals.is_dialogue = false
-set Quests.set_old_man(1)
+set Quests.set_old_man(2)
 set Quests.open_mis_old_man(1)
 => END
 
@@ -25,5 +25,6 @@ Old Man Andrew: Of course you woud be!
 Old Man Andrew: Anyways, Thank you! Come again and we'll join a coffee together
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.score -= 5
+set Quests.remove_objective("Old Man Andrew")
 do PlayerConditionals.map1_score += 1
 => END

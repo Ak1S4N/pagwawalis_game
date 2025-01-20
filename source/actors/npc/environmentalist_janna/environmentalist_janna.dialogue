@@ -22,5 +22,6 @@ Environmentalist Janna: Wow! Love the confidence in you!
 Environmentalist Janna: Well then, I'd like to thank you again!
 Environmentalist Janna: Please keep doing good to this world!
 do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Environmentalist Janna")
 do PlayerConditionals.map1_score += 1
 => END

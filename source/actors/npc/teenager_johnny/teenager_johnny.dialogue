@@ -15,5 +15,6 @@ Teenager Johnny: Wowiee!
 Teenager Johnny: The sidewalk looks just like new!
 Teenager Johnny: Don't worry, Sir! Next time, I will follow your footsteps!
 do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Teenager Johnny")
 do PlayerConditionals.map1_score += 1
 => END

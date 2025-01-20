@@ -555,7 +555,7 @@ target_npc = NodePath("../../environmentalist_janna")
 
 [node name="NPCCompass2" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../old_man")
+target_npc = NodePath("../../old_man_andrew")
 
 [node name="NPCCompass3" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
@@ -569,7 +569,7 @@ target_npc = NodePath("../../teenager_johnny")
 position = Vector2(8, 8)
 target_npc = NodePath("../../adventurer_michel_1")
 
-[node name="old_man" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_ot4sh")]
+[node name="old_man_andrew" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_ot4sh")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(1472, 1184)
@@ -606,27 +606,27 @@ dialogue_sub = NodePath("../dialogue_sub")
 [node name="trash" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1616, 1248)
-quest_master = NodePath("../../old_man")
+quest_master = NodePath("../../old_man_andrew")
 
 [node name="trash2" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1680, 1264)
-quest_master = NodePath("../../old_man")
+quest_master = NodePath("../../old_man_andrew")
 
 [node name="trash3" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1712, 1232)
-quest_master = NodePath("../../old_man")
+quest_master = NodePath("../../old_man_andrew")
 
 [node name="trash4" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1776, 1280)
-quest_master = NodePath("../../old_man")
+quest_master = NodePath("../../old_man_andrew")
 
 [node name="trash5" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1856, 1328)
-quest_master = NodePath("../../old_man")
+quest_master = NodePath("../../old_man_andrew")
 
 [node name="mis_2" type="Node2D" parent="."]
 
@@ -755,7 +755,7 @@ mouse_filter = 2
 [node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers", "NPCS") instance=ExtResource("17_usu0t")]
 player = NodePath("../player")
 tilemap_layers = NodePath("../map_layer")
-NPCS = [NodePath("../old_man"), NodePath("../kid_lary"), NodePath("../environmentalist_janna"), NodePath("../adventurer_michel_1"), NodePath("../teenager_johnny")]
+NPCS = [NodePath("../old_man_andrew"), NodePath("../kid_lary"), NodePath("../environmentalist_janna"), NodePath("../adventurer_michel_1"), NodePath("../teenager_johnny")]
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
 libraries = {
