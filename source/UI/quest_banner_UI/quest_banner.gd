@@ -7,8 +7,6 @@ func _ready() -> void:
 	Quests.objectify.connect(add_and_change_objective)
 
 func add_and_change_objective(npc_name: String, trash_number: int, plant_number: int, quest_id: int) -> void:
-	print("Print for quest #" + str(quest_id))
-	
 	var created_text: String
 	if quest_id == 2:
 		if (trash_number > 0 and plant_number == 0):
@@ -29,7 +27,6 @@ func add_and_change_objective(npc_name: String, trash_number: int, plant_number:
 	objective_text.text = created_text
 	if not qp_children.has(objective_text.name):
 		quest_placeholder.add_child(objective_text)
-	else:
+	elif qp_children.has(objective_text.name) and quest_id != 4:
 		var old_objective_text = quest_placeholder.get_node("QuestOf" + npc_name)
 		old_objective_text.text = created_text
-	

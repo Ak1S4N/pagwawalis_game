@@ -748,6 +748,7 @@ polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328,
 visible = false
 
 [node name="score_UI" parent="CanvasLayer" instance=ExtResource("17_iebsw")]
+mouse_filter = 2
 
 [node name="QuestBanner" parent="CanvasLayer" instance=ExtResource("19_i6t2f")]
 
