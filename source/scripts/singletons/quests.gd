@@ -22,11 +22,18 @@ var map_1: Dictionary = {
 #var teenager_johnny: int = 1
 
 #mg_2
-var gardener_ryan: int = 1
-var goddess_bathala: int = 1
-var economist_rebecca:int = 1
-var biology_student_aki: int = 1
-var wandering_child_ryan: int = 1
+var map_2: Dictionary = {
+	"gardener_ryan" = 1,
+	"goddess_bathala" = 1,
+	"economist_rebecca" = 1,
+	"biology_student_aki" = 1,
+	"wandering_child_ryan" = 1
+}
+#var gardener_ryan: int = 1
+#var goddess_bathala: int = 1
+#var economist_rebecca:int = 1
+#var biology_student_aki: int = 1
+#var wandering_child_ryan: int = 1
 
 #such other needed, like calling signals
 func remove_objective(NPC_name: String) -> void:
@@ -62,16 +69,21 @@ func open_mis_map_2(value: int) -> void:
 	emit_signal("open_mission_2", value)
 
 func set_gardener_ryan(id: int) -> void:
-	gardener_ryan = id
+	map_2["gardener_ryan"] = id
+	emit_signal("objectify", "Gardener Ryan", 5, 0, map_1["Gardener Ryan"])
 
 func set_goddess_bathala(id: int) -> void:
-	goddess_bathala = id
+	map_2["goddess_bathala"] = id
+	emit_signal("objectify", "Goddess Bathala", 5, 0, map_1["Goddess Bathala"])
 
 func set_economist_rebecca(id: int) -> void:
-	economist_rebecca = id
+	map_2["economist_rebecca"] = id
+	emit_signal("objectify", "Economist Rebecca", 5, 0, map_1["Economist Rebecca"])
 
 func set_biology_student_aki(id: int) -> void:
-	biology_student_aki = id
+	map_2["biology_student_aki"] = id
+	emit_signal("objectify", "Biology Student Aki", 5, 0, map_1["Biology Student Aki"])
 
 func set_wandering_child_ryan(id: int) -> void:
-	wandering_child_ryan = id
+	map_2["wandering_child_ryan"] = id
+	emit_signal("objectify", "Wandering Child Ryan", 5, 0, map_1["Wandering Child Ryan"])

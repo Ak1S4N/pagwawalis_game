@@ -21,5 +21,6 @@ Economist Rebecca: May I know your name?
 Economist Rebecca: Thank you, {{PlayerConditionals.player_name}}!
 Economist Rebecca: Hope we meet again soon! Please clean more places!
 do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Economist Rebecca")
 do PlayerConditionals.map2_score += 1
 => END

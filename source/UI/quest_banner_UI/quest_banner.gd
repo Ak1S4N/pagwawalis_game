@@ -11,11 +11,11 @@ func add_and_change_objective(npc_name: String, trash_number: int, plant_number:
 	var created_text: String
 	if quest_id == 2:
 		if (trash_number > 0 and plant_number == 0):
-			created_text = "Help " + npc_name + " out with cleaning " + str(trash_number) + " trashes."
+			created_text = "Help " + npc_name + "\n out with cleaning " + str(trash_number) + " trashes."
 		elif (trash_number == 0 and plant_number > 0):
-			created_text = "Help " + npc_name + " out with planting " + str(plant_number) + " lands."
+			created_text = "Help " + npc_name + "\n out with planting " + str(plant_number) + " lands."
 		elif (trash_number > 0 and plant_number > 0):
-			created_text = "Help " + npc_name + " out with cleaning & planting " + str(trash_number) + " trashes, & " + str(plant_number) + " lands"
+			created_text = "Help " + npc_name + "\n out with cleaning & planting " + str(trash_number) + " trashes, & " + str(plant_number) + "\n lands"
 	elif quest_id == 3:
 		created_text = "Talk to " + npc_name + "."
 
@@ -38,7 +38,6 @@ func remove_objective(npc_name: String) -> void:
 	var qp_children: Array[String]
 	for i in quest_placeholder.get_children():
 		qp_children.append(i.name)
-		print(i.name)
 	
 	if qp_children.has("QuestOf"+npc_name):
 		var old_objective = quest_placeholder.get_node("QuestOf" + npc_name)
