@@ -8,8 +8,6 @@ atlas = ExtResource("1_c7jid")
 region = Rect2(32, 0, 16, 16)
 
 [node name="TrashContainer" type="PanelContainer"]
-z_index = 5
-z_as_relative = false
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_h0ib7")
@@ -21,3 +19,4 @@ texture = SubResource("AtlasTexture_1614d")
 expand_mode = 2
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
