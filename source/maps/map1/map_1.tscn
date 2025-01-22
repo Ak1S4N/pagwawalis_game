@@ -752,9 +752,10 @@ mouse_filter = 2
 
 [node name="QuestBanner" parent="CanvasLayer" instance=ExtResource("19_i6t2f")]
 
-[node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers", "NPCS") instance=ExtResource("17_usu0t")]
+[node name="MinimapUI" parent="." node_paths=PackedStringArray("player", "tilemap_layers", "player_camera", "NPCS") instance=ExtResource("17_usu0t")]
 player = NodePath("../player")
 tilemap_layers = NodePath("../map_layer")
+player_camera = NodePath("../player/Camera2D")
 NPCS = [NodePath("../old_man_andrew"), NodePath("../kid_lary"), NodePath("../environmentalist_janna"), NodePath("../adventurer_michel_1"), NodePath("../teenager_johnny")]
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
