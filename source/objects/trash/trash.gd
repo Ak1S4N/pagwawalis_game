@@ -11,7 +11,9 @@ signal quest_not_obtained(title)
 
 func _ready() -> void:
 	randomize()
-	sprite_2d.frame_coords.y = randi_range(2, 5)
+	var frame_code_array: Array = [0,1,2,5,6,7,11,12,21,22,26]
+	frame_code_array.shuffle()
+	sprite_2d.frame = frame_code_array.front()
 
 func interact() -> void:
 	if PlayerConditionals.movement_tut_done:

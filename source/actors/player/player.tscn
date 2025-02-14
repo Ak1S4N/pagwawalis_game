@@ -1,9 +1,10 @@
-[gd_scene load_steps=43 format=3 uid="uid://515y7pgnjn62"]
+[gd_scene load_steps=44 format=3 uid="uid://515y7pgnjn62"]
 
 [ext_resource type="Script" path="res://source/actors/player/player.gd" id="1_w18ap"]
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="2_o5tba"]
 [ext_resource type="Script" path="res://source/actors/player/interact_manager.gd" id="2_qw35i"]
 [ext_resource type="Script" path="res://source/actors/player/animation_manager.gd" id="3_3gojf"]
+[ext_resource type="Texture2D" uid="uid://2lbi3sjwv0t2" path="res://assets/objects/trashbag.png" id="5_fctc5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5t3f1"]
 radius = 8.0
@@ -361,6 +362,12 @@ texture = ExtResource("2_o5tba")
 hframes = 56
 vframes = 20
 frame = 74
+
+[node name="SpriteTrashbag" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(6, 13)
+texture = ExtResource("5_fctc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["actors"]]
 position = Vector2(8, 8)

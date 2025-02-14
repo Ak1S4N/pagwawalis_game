@@ -23,4 +23,5 @@ Gardener Ryan: Wow! I like your determination!
 Gardener Ryan: May you continue having that attitude!
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map2_score += 1
+set Quests.remove_objective("Gardener Ryan")
 => END
