@@ -8,10 +8,13 @@ var score: int = 0
 
 #map1
 var map1_score: int = 0
+var map1_segregation_finished: bool = false
 var map1_finished: bool = false
 
 #map2
 var map2_score: int = 0
+var map2_segregation_finished: bool = false
+var map2_finished: bool = false
 
 #player ids and all that
 var player_name: String

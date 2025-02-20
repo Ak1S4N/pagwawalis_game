@@ -4,6 +4,7 @@ class_name DialogueSubManager
 #tut
 const POLICE = preload("res://source/actors/npc/police/police.dialogue")
 const POLICE_COMMANDO = preload("res://source/actors/npc/police_commando/police_commando.dialogue")
+const TRASH_BIN = preload("res://source/objects/trash_bin/trash_bin.dialogue")
 
 #mg_1
 const PLAYER = preload("res://source/actors/player/player.dialogue")
@@ -37,6 +38,10 @@ func police_commando_dial(title: String) -> void:
 
 func player_dial(title: String) -> void:
 	DialogueManager.show_dialogue_balloon(PLAYER, title)
+	PlayerConditionals.is_dialogue = true
+
+func trash_bin_dial(title: String) -> void:
+	DialogueManager.show_dialogue_balloon(TRASH_BIN, title)
 	PlayerConditionals.is_dialogue = true
 
 #mg_1

@@ -11,13 +11,15 @@ func _ready() -> void:
 	randomize()
 
 func interact() -> void:
-	var text_id = randi_range(0,1)
-	audio_stream_player.play()
-	await audio_stream_player.finished
-	wo_plant.visible = false
-	match text_id:
-		0:
-			w_plant.visible = true
-		1: 
-			w_plant_2.visible = true
-	quest_master.NPC_score += 1
+	var qm_score = Quests.map_1[quest_master.name]
+	if qm_score >= 2:
+		var text_id = randi_range(0,1)
+		audio_stream_player.play()
+		await audio_stream_player.finished
+		wo_plant.visible = false
+		match text_id:
+			0:
+				w_plant.visible = true
+			1: 
+				w_plant_2.visible = true
+		quest_master.NPC_score += 1

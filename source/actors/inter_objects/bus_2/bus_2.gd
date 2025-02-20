@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 		sprite_2d_2.frame = 2
 
 func interact() -> void:
-	if PlayerConditionals.map2_score >= 5:
+	if PlayerConditionals.map2_segregation_finished:
 		dialogue_sub.bus_dial("quest_finished2")
-	elif not PlayerConditionals.map2_score >= 5:
+	elif not PlayerConditionals.map2_segregation_finished:
 		dialogue_sub.bus_dial("quest_not_finished")

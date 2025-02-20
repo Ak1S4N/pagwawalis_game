@@ -14,6 +14,10 @@ class_name map1
 @onready var mis_5: Node2D = $mis_5
 var cur_mis_id:int = 1
 
+@onready var score_ui: Control = $CanvasLayer/score_UI
+@onready var quest_banner: QuestBanner = $CanvasLayer/QuestBanner
+@onready var minimap_ui: MinimapUI = $MinimapUI
+
 func _ready() -> void:
 	dialogue_sub_man.player_dial('start_1')
 	PlayerConditionals.score = 0
@@ -52,3 +56,15 @@ func show_trash(id: int) -> void:
 
 func back_to_menu() -> void:
 	Transitions.fade_into("res://source/UI/main_menu/main_menu.tscn")
+
+func toggle_moving_UI(toggle: bool) -> void:
+	score_ui.visible = toggle
+	quest_banner.visible = toggle
+	minimap_ui.visible = toggle
+
+func _on_trash_bin_open_trash_bin() -> void:
+	toggle_moving_UI(false)
+
+
+func _on_segregation_exit_trash_bin() -> void:
+	toggle_moving_UI(true)

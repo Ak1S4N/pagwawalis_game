@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://o220dyhg1wxp"]
+[gd_scene load_steps=33 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
 [ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
@@ -21,7 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="17_iebsw"]
 [ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="17_usu0t"]
 [ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
+[ext_resource type="PackedScene" uid="uid://da5tm51oamvl4" path="res://source/UI/segregation_ui/segregation.tscn" id="18_srjlf"]
 [ext_resource type="PackedScene" uid="uid://mn408nb3k1lo" path="res://source/UI/quest_banner_UI/quest_banner.tscn" id="19_i6t2f"]
+[ext_resource type="PackedScene" uid="uid://ccbfbg38wl1ag" path="res://source/objects/trash_bin/trash_bin.tscn" id="21_o1707"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52ftn"]
 texture = ExtResource("1_c7s47")
@@ -601,6 +603,10 @@ y_sort_enabled = true
 position = Vector2(1888, 1552)
 dialogue_sub = NodePath("../dialogue_sub")
 
+[node name="TrashBin" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("21_o1707")]
+position = Vector2(1840, 1520)
+dialogue_sub = NodePath("../dialogue_sub")
+
 [node name="mis_1" type="Node2D" parent="."]
 
 [node name="trash" parent="mis_1" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
@@ -733,7 +739,7 @@ quest_master = NodePath("../../teenager_johnny")
 
 [node name="trash25" parent="mis_5" node_paths=PackedStringArray("quest_master") instance=ExtResource("9_v2cfe")]
 z_index = 1
-position = Vector2(1840, 1504)
+position = Vector2(1744, 1568)
 quest_master = NodePath("../../teenager_johnny")
 
 [node name="invs_wall" type="StaticBody2D" parent="."]
@@ -746,6 +752,10 @@ polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328,
 
 [node name="pause_menu" parent="CanvasLayer" instance=ExtResource("5_1wwvr")]
 visible = false
+
+[node name="Segregation" parent="CanvasLayer" node_paths=PackedStringArray("trash_bin") instance=ExtResource("18_srjlf")]
+visible = false
+trash_bin = NodePath("../../TrashBin")
 
 [node name="score_UI" parent="CanvasLayer" instance=ExtResource("17_iebsw")]
 mouse_filter = 2
@@ -769,3 +779,6 @@ stream = ExtResource("9_y3lc4")
 volume_db = -10.1
 autoplay = true
 bus = &"Music"
+
+[connection signal="open_trash_bin" from="TrashBin" to="." method="_on_trash_bin_open_trash_bin"]
+[connection signal="exit_trash_bin" from="CanvasLayer/Segregation" to="." method="_on_segregation_exit_trash_bin"]

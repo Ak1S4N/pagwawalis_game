@@ -70,11 +70,11 @@ func open_mis_map_2(value: int) -> void:
 
 func set_gardener_ryan(id: int) -> void:
 	map_2["gardener_ryan"] = id
-	emit_signal("objectify", "Gardener Ryan", 5, 0, map_1["Gardener Ryan"])
+	emit_signal("objectify", "Gardener Ryan", 5, 0, map_2["gardener_ryan"])
 
 func set_goddess_bathala(id: int) -> void:
 	map_2["goddess_bathala"] = id
-	emit_signal("objectify", "Goddess Bathala", 5, 0, map_1["Goddess Bathala"])
+	emit_signal("objectify", "Goddess Bathala", 5, 0, map_2["goddess_bathala"])
 
 func set_economist_rebecca(id: int) -> void:
 	map_2["economist_rebecca"] = id

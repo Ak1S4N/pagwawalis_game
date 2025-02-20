@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	animation_tree.set("parameters/walk/blend_position", look_at)
 	animation_tree.set("parameters/grab/blend_position", look_at)
 
-
 	if player.can_move:
 		if player.input_dir:
 			animation_tree.get("parameters/playback").travel("walk")
@@ -26,6 +25,7 @@ func _process(delta: float) -> void:
 
 
 func idle_anim() -> void:
+	sprite_trashbag.visible = false
 	animation_tree.get("parameters/playback").travel("idle")
 
 func put_away_anim() -> void:
