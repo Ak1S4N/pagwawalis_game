@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cy7fn377vwx40"]
 
-[ext_resource type="Script" path="res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.gd" id="1_6ruf6"]
+[ext_resource type="Script" uid="uid://hkposg8upoix" path="res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.gd" id="1_6ruf6"]
 [ext_resource type="Texture2D" uid="uid://vsdvng6q6cpu" path="res://assets/tileset/actors/npc/map_2/eco_student_aki_2.png" id="1_v7hcd"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_0t2yq"]
-[ext_resource type="Script" path="res://source/actors/npc/map_2/biology_student_aki/quest_manager.gd" id="2_6lubk"]
+[ext_resource type="Script" uid="uid://buf80oh2nysd" path="res://source/actors/npc/map_2/biology_student_aki/quest_manager.gd" id="2_6lubk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r6dtu"]
 radius = 8.0
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="biology_student_aki" type="StaticBody2D"]

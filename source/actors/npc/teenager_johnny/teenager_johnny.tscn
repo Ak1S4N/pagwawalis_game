@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://b51sngcpu4mcb"]
 
-[ext_resource type="Script" path="res://source/actors/npc/teenager_johnny/teenager_johnny.gd" id="1_1trit"]
+[ext_resource type="Script" uid="uid://c4g78v0hn5yue" path="res://source/actors/npc/teenager_johnny/teenager_johnny.gd" id="1_1trit"]
 [ext_resource type="Texture2D" uid="uid://wscdgajdt3xs" path="res://assets/tileset/actors/npc/teenager_johnny.png" id="1_kip3q"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_4ocgl"]
-[ext_resource type="Script" path="res://source/actors/npc/teenager_johnny/quest_manager.gd" id="2_wfdm7"]
+[ext_resource type="Script" uid="uid://d21366k5kn3sf" path="res://source/actors/npc/teenager_johnny/quest_manager.gd" id="2_wfdm7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_daigh"]
 radius = 8.0
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="teenager_johnny" type="StaticBody2D"]
@@ -97,6 +97,6 @@ shape = SubResource("CircleShape2D_daigh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ikpbj")
+&"": SubResource("AnimationLibrary_ikpbj")
 }
 autoplay = "idle"

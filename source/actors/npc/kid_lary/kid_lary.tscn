@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cvb3pqqncw67v"]
 
 [ext_resource type="Texture2D" uid="uid://bjxiodxdkkq6a" path="res://assets/tileset/actors/npc/kid_lary.png" id="1_1wctr"]
-[ext_resource type="Script" path="res://source/actors/npc/kid_lary/kid_lary.gd" id="1_e1ov2"]
-[ext_resource type="Script" path="res://source/actors/npc/kid_lary/quest_manager.gd" id="2_1tspl"]
+[ext_resource type="Script" uid="uid://baksgndjmtkfv" path="res://source/actors/npc/kid_lary/kid_lary.gd" id="1_e1ov2"]
+[ext_resource type="Script" uid="uid://bf2msa7pt1s64" path="res://source/actors/npc/kid_lary/quest_manager.gd" id="2_1tspl"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="4_0ibv6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4wehp"]
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mwr31"]
 _data = {
-"RESET": SubResource("Animation_p0h4u"),
-"idle": SubResource("Animation_ucy85")
+&"RESET": SubResource("Animation_p0h4u"),
+&"idle": SubResource("Animation_ucy85")
 }
 
 [node name="kid_lary" type="StaticBody2D"]

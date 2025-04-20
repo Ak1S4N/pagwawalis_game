@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=4 uid="uid://s257q4k14wyq"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_gddq2"]
-[ext_resource type="Script" path="res://source/maps/minigame_1/minigame_1.gd" id="1_pljei"]
+[ext_resource type="Script" uid="uid://cnwjphvwtj2yj" path="res://source/maps/minigame_1/minigame_1.gd" id="1_pljei"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="2_qatmb"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="3_6lkj6"]
 [ext_resource type="PackedScene" uid="uid://dvbdiuxk4fgdr" path="res://source/actors/player_fighting/player_fighting.tscn" id="5_d435b"]

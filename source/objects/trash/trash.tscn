@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8f6rlpykl0g0"]
 
 [ext_resource type="Texture2D" uid="uid://f1t0c4vdu3r2" path="res://assets/objects/tileset/mga_basura.png" id="1_f4vas"]
-[ext_resource type="Script" path="res://source/objects/trash/trash.gd" id="1_rdou2"]
+[ext_resource type="Script" uid="uid://wva5mrs5fr37" path="res://source/objects/trash/trash.gd" id="1_rdou2"]
 [ext_resource type="AudioStream" uid="uid://d0wky7siv71xx" path="res://assets/audios/sfx/paper_put_away.mp3" id="3_pjqbr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gruwf"]

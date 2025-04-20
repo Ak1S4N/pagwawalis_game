@@ -1,8 +1,8 @@
 [gd_scene load_steps=33 format=4 uid="uid://o220dyhg1wxp"]
 
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="1_c7s47"]
-[ext_resource type="Script" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
-[ext_resource type="Script" path="res://source/scripts/classes/dialogue_manager.gd" id="2_3suc4"]
+[ext_resource type="Script" uid="uid://ci4udnxi2jd3k" path="res://source/maps/map1/map_1.gd" id="1_cnwih"]
+[ext_resource type="Script" uid="uid://dkwn2ku731end" path="res://source/scripts/classes/dialogue_manager.gd" id="2_3suc4"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="2_qkbwn"]
 [ext_resource type="PackedScene" uid="uid://515y7pgnjn62" path="res://source/actors/player/player.tscn" id="3_d0wea"]
 [ext_resource type="Texture2D" uid="uid://b8iuwiy6ef3hp" path="res://assets/tileset/bus.png" id="3_qpw66"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="5_f1wmb"]
 [ext_resource type="AudioStream" uid="uid://drg0b2on4u2m1" path="res://assets/audios/sfx/car_start_then_goes.mp3" id="6_v6si1"]
 [ext_resource type="PackedScene" uid="uid://dy8u048jg3e8" path="res://source/actors/npc/old_man/old_man.tscn" id="7_ot4sh"]
-[ext_resource type="Script" path="res://source/maps/map1/cutscene_manager.gd" id="8_lv3v3"]
+[ext_resource type="Script" uid="uid://de0e5wpqndiet" path="res://source/maps/map1/cutscene_manager.gd" id="8_lv3v3"]
 [ext_resource type="PackedScene" uid="uid://ddmi7pevk31sj" path="res://source/actors/player/npc_compass/npc_compass.tscn" id="9_l8hi7"]
 [ext_resource type="PackedScene" uid="uid://cvb3pqqncw67v" path="res://source/actors/npc/kid_lary/kid_lary.tscn" id="9_ugotv"]
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_v2cfe"]
@@ -482,9 +482,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_byjao"]
 _data = {
-"RESET": SubResource("Animation_h44vd"),
-"cut_1": SubResource("Animation_f4tiw"),
-"cut_2": SubResource("Animation_xorkp")
+&"RESET": SubResource("Animation_h44vd"),
+&"cut_1": SubResource("Animation_f4tiw"),
+&"cut_2": SubResource("Animation_xorkp")
 }
 
 [node name="map_1" type="Node2D" node_paths=PackedStringArray("paused_menu", "dialogue_sub_man")]
@@ -770,7 +770,7 @@ NPCS = [NodePath("../old_man_andrew"), NodePath("../kid_lary"), NodePath("../env
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_byjao")
+&"": SubResource("AnimationLibrary_byjao")
 }
 script = ExtResource("8_lv3v3")
 

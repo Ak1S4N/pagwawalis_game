@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b70pxq1k24mae"]
 
 [ext_resource type="Texture2D" uid="uid://f1t0c4vdu3r2" path="res://assets/objects/tileset/mga_basura.png" id="1_c7jid"]
-[ext_resource type="Script" path="res://source/UI/segregation_ui/trash/trash_container.gd" id="1_h0ib7"]
+[ext_resource type="Script" uid="uid://b7aj3bp8r4s0h" path="res://source/UI/segregation_ui/trash/trash_container.gd" id="1_h0ib7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1614d"]
 atlas = ExtResource("1_c7jid")

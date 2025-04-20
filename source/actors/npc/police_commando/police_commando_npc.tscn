@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cbvy5xqrbkmjq"]
 
-[ext_resource type="Script" path="res://source/actors/npc/police_commando/police_commando_npc.gd" id="1_5h7ys"]
+[ext_resource type="Script" uid="uid://dw76k5becax0x" path="res://source/actors/npc/police_commando/police_commando_npc.gd" id="1_5h7ys"]
 [ext_resource type="Texture2D" uid="uid://dx8bys4spbf4b" path="res://assets/tileset/actors/npc/policeman_npc.png" id="2_bfnj4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l1wdn"]
@@ -75,10 +75,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq"),
-"walkin": SubResource("Animation_pb5dm")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq"),
+&"walkin": SubResource("Animation_pb5dm")
 }
 
 [node name="police_commando_npc" type="StaticBody2D"]

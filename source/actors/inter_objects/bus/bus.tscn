@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://2jewppqwu0lu"]
 
 [ext_resource type="Texture2D" uid="uid://cvqidfy0oixcy" path="res://assets/tileset/ME_Singles_Vehicles_16x16_Bus_Left_1.png" id="1_ao0vq"]
-[ext_resource type="Script" path="res://source/actors/inter_objects/bus/bus.gd" id="1_r5i44"]
+[ext_resource type="Script" uid="uid://bq75y15tga7q0" path="res://source/actors/inter_objects/bus/bus.gd" id="1_r5i44"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="3_73w11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv1tg"]

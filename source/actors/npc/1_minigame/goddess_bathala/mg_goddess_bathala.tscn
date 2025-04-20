@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://k6gkt8jqoqym"]
 
 [ext_resource type="Texture2D" uid="uid://dnlldjbbjj2e2" path="res://assets/tileset/actors/npc/map_2/butterfly_goddess_bathala_2.png" id="1_bbawa"]
-[ext_resource type="Script" path="res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.gd" id="1_mv6nj"]
+[ext_resource type="Script" uid="uid://c5pwb0d8t4g65" path="res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.gd" id="1_mv6nj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqp5h"]
 size = Vector2(10, 15)
@@ -69,9 +69,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hq5mk"]
 _data = {
-"RESET": SubResource("Animation_f55yk"),
-"disappear": SubResource("Animation_t4yy6"),
-"idle": SubResource("Animation_k4mem")
+&"RESET": SubResource("Animation_f55yk"),
+&"disappear": SubResource("Animation_t4yy6"),
+&"idle": SubResource("Animation_k4mem")
 }
 
 [node name="MG_goddess_bathala" type="StaticBody2D"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=48 format=3 uid="uid://dvbdiuxk4fgdr"]
 
-[ext_resource type="Script" path="res://source/actors/player_fighting/player_fighting.gd" id="1_4la4e"]
+[ext_resource type="Script" uid="uid://dfgawf7b2t0gk" path="res://source/actors/player_fighting/player_fighting.gd" id="1_4la4e"]
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="1_ptxyl"]
-[ext_resource type="Script" path="res://source/actors/player_fighting/animation_man.gd" id="2_86dqb"]
-[ext_resource type="Script" path="res://source/scripts/classes/attack_man.gd" id="2_iiaea"]
-[ext_resource type="Script" path="res://source/scripts/classes/health_man.gd" id="2_n0ykg"]
+[ext_resource type="Script" uid="uid://ctk1fql8iybal" path="res://source/actors/player_fighting/animation_man.gd" id="2_86dqb"]
+[ext_resource type="Script" uid="uid://c76je1gfqhyla" path="res://source/scripts/classes/attack_man.gd" id="2_iiaea"]
+[ext_resource type="Script" uid="uid://dhve2xtibgsu2" path="res://source/scripts/classes/health_man.gd" id="2_n0ykg"]
 
 [sub_resource type="Animation" id="Animation_vro5r"]
 length = 0.001
@@ -39,8 +39,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bml6i"]
 _data = {
-"RESET": SubResource("Animation_vro5r"),
-"damaged": SubResource("Animation_sve6j")
+&"RESET": SubResource("Animation_vro5r"),
+&"damaged": SubResource("Animation_sve6j")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xh6ve"]
@@ -492,19 +492,19 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ioth0"]
 _data = {
-"RESET": SubResource("Animation_35xgr"),
-"attack_back": SubResource("Animation_1rik2"),
-"attack_front": SubResource("Animation_27npb"),
-"attack_left": SubResource("Animation_m30j8"),
-"attack_right": SubResource("Animation_lf808"),
-"idle_back": SubResource("Animation_a4lfd"),
-"idle_front": SubResource("Animation_ef077"),
-"idle_left": SubResource("Animation_riq52"),
-"idle_right": SubResource("Animation_r4au4"),
-"walk_back": SubResource("Animation_c47nd"),
-"walk_front": SubResource("Animation_ooa3m"),
-"walk_left": SubResource("Animation_6qgr8"),
-"walk_right": SubResource("Animation_hk0ek")
+&"RESET": SubResource("Animation_35xgr"),
+&"attack_back": SubResource("Animation_1rik2"),
+&"attack_front": SubResource("Animation_27npb"),
+&"attack_left": SubResource("Animation_m30j8"),
+&"attack_right": SubResource("Animation_lf808"),
+&"idle_back": SubResource("Animation_a4lfd"),
+&"idle_front": SubResource("Animation_ef077"),
+&"idle_left": SubResource("Animation_riq52"),
+&"idle_right": SubResource("Animation_r4au4"),
+&"walk_back": SubResource("Animation_c47nd"),
+&"walk_front": SubResource("Animation_ooa3m"),
+&"walk_left": SubResource("Animation_6qgr8"),
+&"walk_right": SubResource("Animation_hk0ek")
 }
 
 [node name="player_fighting" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["figher", "fighter"]]

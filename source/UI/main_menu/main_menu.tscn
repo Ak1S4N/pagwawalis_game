@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://diwh5g7y7c2g5"]
 
-[ext_resource type="Script" path="res://source/UI/main_menu/main_menu.gd" id="1_e0qvs"]
+[ext_resource type="Script" uid="uid://da7hki3g3yd05" path="res://source/UI/main_menu/main_menu.gd" id="1_e0qvs"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_e4ft0"]
 [ext_resource type="Texture2D" uid="uid://d4jdx1gv4jkoa" path="res://assets/tileset/actors/player/main_player_cleaning_sim.png" id="2_pnfj6"]
 [ext_resource type="FontFile" uid="uid://cukq56dfcji1i" path="res://assets/fonts/PressStart2P.ttf" id="3_ielpu"]
@@ -599,19 +599,19 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6p3v8"]
 _data = {
-"RESET": SubResource("Animation_ojpjb"),
-"grab_back": SubResource("Animation_rwbin"),
-"grab_front": SubResource("Animation_q8il5"),
-"grab_left": SubResource("Animation_uko3s"),
-"grab_right": SubResource("Animation_wvfdd"),
-"idle_back": SubResource("Animation_th22m"),
-"idle_front": SubResource("Animation_n8ge7"),
-"idle_left": SubResource("Animation_by4bk"),
-"idle_right": SubResource("Animation_nbgki"),
-"walk_back": SubResource("Animation_70t2s"),
-"walk_front": SubResource("Animation_wps34"),
-"walk_left": SubResource("Animation_l7yjv"),
-"walk_right": SubResource("Animation_ugei5")
+&"RESET": SubResource("Animation_ojpjb"),
+&"grab_back": SubResource("Animation_rwbin"),
+&"grab_front": SubResource("Animation_q8il5"),
+&"grab_left": SubResource("Animation_uko3s"),
+&"grab_right": SubResource("Animation_wvfdd"),
+&"idle_back": SubResource("Animation_th22m"),
+&"idle_front": SubResource("Animation_n8ge7"),
+&"idle_left": SubResource("Animation_by4bk"),
+&"idle_right": SubResource("Animation_nbgki"),
+&"walk_back": SubResource("Animation_70t2s"),
+&"walk_front": SubResource("Animation_wps34"),
+&"walk_left": SubResource("Animation_l7yjv"),
+&"walk_right": SubResource("Animation_ugei5")
 }
 
 [sub_resource type="Animation" id="Animation_n8sqq"]
@@ -648,8 +648,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mpk06"]
 _data = {
-"RESET": SubResource("Animation_n8sqq"),
-"camera_idle": SubResource("Animation_f5be4")
+&"RESET": SubResource("Animation_n8sqq"),
+&"camera_idle": SubResource("Animation_f5be4")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_k1ryv"]

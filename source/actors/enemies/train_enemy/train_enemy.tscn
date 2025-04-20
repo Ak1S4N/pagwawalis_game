@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cqdvufcjunpk2"]
 
-[ext_resource type="Script" path="res://source/actors/enemies/train_enemy/train_enemy.gd" id="1_wf7fj"]
-[ext_resource type="Script" path="res://source/scripts/classes/health_man.gd" id="2_awdpy"]
+[ext_resource type="Script" uid="uid://u8j8yyaqvdyc" path="res://source/actors/enemies/train_enemy/train_enemy.gd" id="1_wf7fj"]
+[ext_resource type="Script" uid="uid://dhve2xtibgsu2" path="res://source/scripts/classes/health_man.gd" id="2_awdpy"]
 [ext_resource type="Texture2D" uid="uid://d3dkq1dk3ftxj" path="res://icon.svg" id="2_lp3vj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnmx7"]
@@ -56,9 +56,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kuwa1"]
 _data = {
-"RESET": SubResource("Animation_yxu7a"),
-"damaged": SubResource("Animation_g6nrn"),
-"idle": SubResource("Animation_m2pp3")
+&"RESET": SubResource("Animation_yxu7a"),
+&"damaged": SubResource("Animation_g6nrn"),
+&"idle": SubResource("Animation_m2pp3")
 }
 
 [node name="train_enemy" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["enemy"]]

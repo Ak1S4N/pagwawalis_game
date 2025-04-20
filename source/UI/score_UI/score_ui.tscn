@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://n2aqq8k1qrta"]
 
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="1_n8fie"]
-[ext_resource type="Script" path="res://source/UI/score_UI/score_ui.gd" id="1_sh6p3"]
+[ext_resource type="Script" uid="uid://bydwglkb0pkp4" path="res://source/UI/score_UI/score_ui.gd" id="1_sh6p3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tcpn8"]
 atlas = ExtResource("1_n8fie")

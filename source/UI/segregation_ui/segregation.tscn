@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://da5tm51oamvl4"]
 
 [ext_resource type="Texture2D" uid="uid://cift8ggeimqxr" path="res://assets/objects/trashcan.png" id="1_rhxpk"]
-[ext_resource type="Script" path="res://source/UI/segregation_ui/segregation.gd" id="1_y6ack"]
+[ext_resource type="Script" uid="uid://fdxr8lr6mvn8" path="res://source/UI/segregation_ui/segregation.gd" id="1_y6ack"]
 [ext_resource type="AudioStream" uid="uid://ci7tsol3r0pvj" path="res://assets/audios/sfx/Metal Trash Can Filled Sound Effect(1).mp3" id="3_7rfms"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkcku"]

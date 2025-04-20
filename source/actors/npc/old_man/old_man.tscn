@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dy8u048jg3e8"]
 
 [ext_resource type="Texture2D" uid="uid://b0plm4o7dl3rq" path="res://assets/tileset/actors/npc/old_man.png" id="1_6lw12"]
-[ext_resource type="Script" path="res://source/actors/npc/old_man/old_man.gd" id="1_u6i0w"]
-[ext_resource type="Script" path="res://source/actors/npc/old_man/quest_manager.gd" id="2_gbafd"]
+[ext_resource type="Script" uid="uid://cb2t4gifkihq0" path="res://source/actors/npc/old_man/old_man.gd" id="1_u6i0w"]
+[ext_resource type="Script" uid="uid://cb01xsf8w8wn3" path="res://source/actors/npc/old_man/quest_manager.gd" id="2_gbafd"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="4_iljm8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pn0tl"]
@@ -43,8 +43,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_an5x0"]
 _data = {
-"RESET": SubResource("Animation_2e75f"),
-"idle": SubResource("Animation_ediqq")
+&"RESET": SubResource("Animation_2e75f"),
+&"idle": SubResource("Animation_ediqq")
 }
 
 [node name="old_man" type="StaticBody2D"]

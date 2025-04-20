@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddmi7pevk31sj"]
 
 [ext_resource type="Texture2D" uid="uid://bmfhjke4mtc8i" path="res://assets/UI/Modern_UI_Style_2.png" id="1_5ltxx"]
-[ext_resource type="Script" path="res://source/actors/player/npc_compass/npc_compass.gd" id="1_fwk8l"]
+[ext_resource type="Script" uid="uid://b5n4ag8vsmqf6" path="res://source/actors/player/npc_compass/npc_compass.gd" id="1_fwk8l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwi4k"]
 atlas = ExtResource("1_5ltxx")

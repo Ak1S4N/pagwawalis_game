@@ -35,6 +35,10 @@ var map_2: Dictionary = {
 #var biology_student_aki: int = 1
 #var wandering_child_ryan: int = 1
 
+var map_3: Dictionary = {
+	"traveler_jimbei" = 1
+}
+
 #such other needed, like calling signals
 func remove_objective(NPC_name: String) -> void:
 	emit_signal("remove_objective_UI", NPC_name)
@@ -78,12 +82,18 @@ func set_goddess_bathala(id: int) -> void:
 
 func set_economist_rebecca(id: int) -> void:
 	map_2["economist_rebecca"] = id
-	emit_signal("objectify", "Economist Rebecca", 5, 0, map_1["Economist Rebecca"])
+	emit_signal("objectify", "Economist Rebecca", 5, 0, map_2["Economist Rebecca"])
 
 func set_biology_student_aki(id: int) -> void:
 	map_2["biology_student_aki"] = id
-	emit_signal("objectify", "Biology Student Aki", 5, 0, map_1["Biology Student Aki"])
+	emit_signal("objectify", "Biology Student Aki", 5, 0, map_2["Biology Student Aki"])
 
 func set_wandering_child_ryan(id: int) -> void:
 	map_2["wandering_child_ryan"] = id
-	emit_signal("objectify", "Wandering Child Ryan", 5, 0, map_1["Wandering Child Ryan"])
+	emit_signal("objectify", "Wandering Child Ryan", 5, 0, map_2["Wandering Child Ryan"])
+
+
+#mg part 3
+func set_traveler_jimbei(id: int) -> void:
+	map_3["traveler_jimbei"] = id
+	emit_signal("objectify", "Traveler Jimbei", 5, 0, map_3["traveler_jimbei"])

@@ -1,9 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://7vrbrgatcsyf"]
+[gd_scene load_steps=14 format=4 uid="uid://7vrbrgatcsyf"]
 
+[ext_resource type="Script" uid="uid://dkwn2ku731end" path="res://source/scripts/classes/dialogue_manager.gd" id="1_35ahm"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_drgin"]
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="2_1ao3f"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="3_goa3b"]
 [ext_resource type="PackedScene" uid="uid://515y7pgnjn62" path="res://source/actors/player/player.tscn" id="4_t12rj"]
+[ext_resource type="PackedScene" uid="uid://vf0tqrhk1aqu" path="res://source/actors/npc/map_3/traveler_jimbei/traveler_jimbei.tscn" id="6_x4b88"]
+[ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="7_bnr1l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlqdb"]
 texture = ExtResource("1_drgin")
@@ -1018,6 +1021,9 @@ sources/2 = SubResource("TileSetAtlasSource_4uqaj")
 [node name="map_3" type="Node2D"]
 y_sort_enabled = true
 
+[node name="dialogue_sub" type="Node" parent="."]
+script = ExtResource("1_35ahm")
+
 [node name="tile_layer" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -1078,7 +1084,17 @@ limit_top = 80
 limit_right = 1360
 limit_bottom = 992
 
+[node name="traveler_jimbei" parent="." instance=ExtResource("6_x4b88")]
+position = Vector2(976, 256)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(0, 896, 0, 944, 64, 944, 64, 912, 80, 912, 80, 864, 192, 864, 192, 896, 416, 896, 416, 864, 688, 864, 688, 896, 960, 896, 960, 912, 1120, 912, 1120, 880, 1152, 880, 1152, 720, 1280, 720, 1280, 688, 1152, 688, 1152, 464, 1312, 464, 1312, 432, 1152, 432, 1152, 240, 1248, 240, 1248, 208, 1152, 208, 1152, 80, 0, 80, 0, 896, -32, 896, -32, 32, 1376, 32, 1376, 1056, -32, 976, -32, 912)
+
+[node name="mis_layer" type="Node2D" parent="."]
+
+[node name="mis1" type="Node2D" parent="mis_layer"]
+
+[node name="trash" parent="mis_layer/mis1" instance=ExtResource("7_bnr1l")]
+position = Vector2(1152, 288)

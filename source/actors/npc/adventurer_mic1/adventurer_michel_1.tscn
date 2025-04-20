@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqqns72eqta0r"]
 
 [ext_resource type="Texture2D" uid="uid://hi7k6mkl6nv6" path="res://assets/tileset/actors/npc/adventurer_michel.png" id="1_4fcr5"]
-[ext_resource type="Script" path="res://source/actors/npc/adventurer_mic1/adventurer_michel_1.gd" id="1_edfw2"]
+[ext_resource type="Script" uid="uid://d3g0flwy03x2o" path="res://source/actors/npc/adventurer_mic1/adventurer_michel_1.gd" id="1_edfw2"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_c5cos"]
-[ext_resource type="Script" path="res://source/actors/npc/adventurer_mic1/quest_manager.gd" id="2_v8c7n"]
+[ext_resource type="Script" uid="uid://dfga5g61al6ca" path="res://source/actors/npc/adventurer_mic1/quest_manager.gd" id="2_v8c7n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikqu3"]
 radius = 8.0
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="adventurer_michel_1" type="StaticBody2D"]

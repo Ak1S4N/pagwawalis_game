@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3lj1kabfpd2k"]
 
-[ext_resource type="Script" path="res://source/actors/inter_objects/bus_2/bus_2.gd" id="1_101mr"]
+[ext_resource type="Script" uid="uid://bfutemqx7vtx8" path="res://source/actors/inter_objects/bus_2/bus_2.gd" id="1_101mr"]
 [ext_resource type="Texture2D" uid="uid://cvqidfy0oixcy" path="res://assets/tileset/ME_Singles_Vehicles_16x16_Bus_Left_1.png" id="1_xvpxh"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_oi7if"]
 

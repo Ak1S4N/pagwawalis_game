@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dja0myw4o8tlr"]
 
-[ext_resource type="Script" path="res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.gd" id="1_6dcec"]
+[ext_resource type="Script" uid="uid://cp0cpno5wprb1" path="res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.gd" id="1_6dcec"]
 [ext_resource type="Texture2D" uid="uid://cdy6gsimw1aub" path="res://assets/tileset/actors/npc/map_2/gardener_ryan_2.png" id="1_q5nel"]
-[ext_resource type="Script" path="res://source/actors/npc/map_2/gardener_ryan/quest_manager.gd" id="2_davaj"]
+[ext_resource type="Script" uid="uid://cndrqbga2bj2c" path="res://source/actors/npc/map_2/gardener_ryan/quest_manager.gd" id="2_davaj"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_ofk1h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aeoyi"]
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="gardener_ryan" type="StaticBody2D"]

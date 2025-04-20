@@ -1,8 +1,8 @@
 [gd_scene load_steps=36 format=4 uid="uid://bu3duenkeo0qn"]
 
-[ext_resource type="Script" path="res://source/maps/map_2/map_2.gd" id="1_7mumy"]
+[ext_resource type="Script" uid="uid://cfxetpprn83wx" path="res://source/maps/map_2/map_2.gd" id="1_7mumy"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_d2v6o"]
-[ext_resource type="Script" path="res://source/scripts/classes/dialogue_manager.gd" id="1_yd7y6"]
+[ext_resource type="Script" uid="uid://dkwn2ku731end" path="res://source/scripts/classes/dialogue_manager.gd" id="1_yd7y6"]
 [ext_resource type="Texture2D" uid="uid://ds8378vbyuj3y" path="res://assets/tileset/7_Villas_16x16.png" id="2_mn0g0"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="3_g3lk3"]
 [ext_resource type="PackedScene" uid="uid://515y7pgnjn62" path="res://source/actors/player/player.tscn" id="4_6gfhc"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bhfec6usel1sf" path="res://assets/objects/seed_bag.png" id="13_gywht"]
 [ext_resource type="Texture2D" uid="uid://b1mqmjx7hmbf5" path="res://assets/objects/bg_rays_for_ecoguardian.png" id="13_llj68"]
 [ext_resource type="PackedScene" uid="uid://ccbfbg38wl1ag" path="res://source/objects/trash_bin/trash_bin.tscn" id="14_8ku6k"]
-[ext_resource type="Script" path="res://source/maps/map_2/cutscene_manager.gd" id="14_ns46h"]
+[ext_resource type="Script" uid="uid://bp0bjqo00w502" path="res://source/maps/map_2/cutscene_manager.gd" id="14_ns46h"]
 [ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="15_knjft"]
 [ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="18_30jld"]
 [ext_resource type="PackedScene" uid="uid://dxh0c4xidvkw6" path="res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.tscn" id="19_bg08p"]
@@ -967,9 +967,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4ebl"]
 _data = {
-"RESET": SubResource("Animation_b3sfm"),
-"cut_1": SubResource("Animation_xif13"),
-"cut_2": SubResource("Animation_qiul0")
+&"RESET": SubResource("Animation_b3sfm"),
+&"cut_1": SubResource("Animation_xif13"),
+&"cut_2": SubResource("Animation_qiul0")
 }
 
 [node name="map_2" type="Node2D" node_paths=PackedStringArray("dialogue_sub")]
@@ -1263,7 +1263,7 @@ bus = &"Music"
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="." node_paths=PackedStringArray("dsb")]
 libraries = {
-"": SubResource("AnimationLibrary_h4ebl")
+&"": SubResource("AnimationLibrary_h4ebl")
 }
 script = ExtResource("14_ns46h")
 dsb = NodePath("../dialogue_sub_manager")

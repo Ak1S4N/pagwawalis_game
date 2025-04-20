@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://btey885vd86un"]
 
-[ext_resource type="Script" path="res://source/actors/enemies/trash_boss/trash_boss.gd" id="1_dledw"]
-[ext_resource type="Script" path="res://source/scripts/classes/health_man.gd" id="2_3ixca"]
+[ext_resource type="Script" uid="uid://ch0y3cs18ae4w" path="res://source/actors/enemies/trash_boss/trash_boss.gd" id="1_dledw"]
+[ext_resource type="Script" uid="uid://dhve2xtibgsu2" path="res://source/scripts/classes/health_man.gd" id="2_3ixca"]
 [ext_resource type="Texture2D" uid="uid://d4i0g34jkoemj" path="res://assets/tileset/actors/enemies/trash_boss.png" id="2_ljovu"]
-[ext_resource type="Script" path="res://source/actors/enemies/trash_boss/animation_manager.gd" id="3_i77qo"]
+[ext_resource type="Script" uid="uid://b0svnyk5plb3q" path="res://source/actors/enemies/trash_boss/animation_manager.gd" id="3_i77qo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_56emc"]
 radius = 93.094
@@ -44,8 +44,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nwk45"]
 _data = {
-"RESET": SubResource("Animation_dsy8r"),
-"damaged": SubResource("Animation_m22ql")
+&"RESET": SubResource("Animation_dsy8r"),
+&"damaged": SubResource("Animation_m22ql")
 }
 
 [sub_resource type="Animation" id="Animation_g1i61"]
@@ -148,10 +148,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lm0n4"]
 _data = {
-"RESET": SubResource("Animation_g1i61"),
-"idle": SubResource("Animation_e33il"),
-"scream": SubResource("Animation_yc2ue"),
-"slash": SubResource("Animation_xsrbo")
+&"RESET": SubResource("Animation_g1i61"),
+&"idle": SubResource("Animation_e33il"),
+&"scream": SubResource("Animation_yc2ue"),
+&"slash": SubResource("Animation_xsrbo")
 }
 
 [node name="trash_boss" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["enemy"]]

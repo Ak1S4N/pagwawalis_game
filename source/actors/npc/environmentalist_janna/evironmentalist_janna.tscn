@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://3dxacguwwact"]
 
 [ext_resource type="Texture2D" uid="uid://d1stu2rj3vroe" path="res://assets/tileset/actors/npc/Environmentalist Janna.png" id="1_iryr6"]
-[ext_resource type="Script" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.gd" id="1_vce4g"]
-[ext_resource type="Script" path="res://source/actors/npc/environmentalist_janna/quest_manager.gd" id="2_kgw4i"]
+[ext_resource type="Script" uid="uid://cd57fa8s28taf" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.gd" id="1_vce4g"]
+[ext_resource type="Script" uid="uid://csqygywo6pldd" path="res://source/actors/npc/environmentalist_janna/quest_manager.gd" id="2_kgw4i"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_lbget"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8pnhu"]
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="evironmentalist_janna" type="StaticBody2D"]

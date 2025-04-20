@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dq6codrgpahjg"]
 
-[ext_resource type="Script" path="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.gd" id="1_n863p"]
+[ext_resource type="Script" uid="uid://bectxy8o88e87" path="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.gd" id="1_n863p"]
 [ext_resource type="Texture2D" uid="uid://l1fpnwrp1dv3" path="res://assets/tileset/actors/npc/map_2/economist_rebecca_2.png" id="1_u7dvp"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_7y774"]
-[ext_resource type="Script" path="res://source/actors/npc/map_2/economist_rebecca/quest_manager.gd" id="2_lgele"]
+[ext_resource type="Script" uid="uid://cw53j3ldxqtfb" path="res://source/actors/npc/map_2/economist_rebecca/quest_manager.gd" id="2_lgele"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvkf2"]
 radius = 8.0
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="economist_rebecca" type="StaticBody2D"]

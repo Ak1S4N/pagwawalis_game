@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=4 uid="uid://hpf2djcicex8"]
 
-[ext_resource type="Script" path="res://source/maps/tutorial/tutorial.gd" id="1_nbrfv"]
+[ext_resource type="Script" uid="uid://do408u2q7dyvd" path="res://source/maps/tutorial/tutorial.gd" id="1_nbrfv"]
 [ext_resource type="Texture2D" uid="uid://hyqubvkstv1r" path="res://assets/tileset/Godot_Autotiles_16x16.png" id="2_m3uo3"]
-[ext_resource type="Script" path="res://source/scripts/classes/dialogue_manager.gd" id="2_q14bh"]
+[ext_resource type="Script" uid="uid://dkwn2ku731end" path="res://source/scripts/classes/dialogue_manager.gd" id="2_q14bh"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="3_18n35"]
 [ext_resource type="Texture2D" uid="uid://cjx5t0hsdlcoo" path="res://assets/tileset/ME_Singles_Camping_16x16_Mobile_House_Small_2.png" id="4_bhcve"]
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="5_iwy2d"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbvy5xqrbkmjq" path="res://source/actors/npc/police_commando/police_commando_npc.tscn" id="8_ra4lh"]
 [ext_resource type="AudioStream" uid="uid://b5x2w4qgfs56" path="res://assets/audios/bgm/Campfire Tales.mp3" id="9_2uj46"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="10_7uphb"]
-[ext_resource type="Script" path="res://source/scripts/classes/cutscene_manager.gd" id="11_5b7fl"]
+[ext_resource type="Script" uid="uid://c6wbkbf1ilh6r" path="res://source/scripts/classes/cutscene_manager.gd" id="11_5b7fl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iuxxr"]
 
@@ -1682,8 +1682,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y8gn8"]
 _data = {
-"RESET": SubResource("Animation_s48gv"),
-"cutscene_1": SubResource("Animation_p58jh")
+&"RESET": SubResource("Animation_s48gv"),
+&"cutscene_1": SubResource("Animation_p58jh")
 }
 
 [node name="tutorial" type="Node2D" node_paths=PackedStringArray("dialogue_sub", "paused_menu", "trashes_parent_node")]

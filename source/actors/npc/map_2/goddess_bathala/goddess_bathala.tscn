@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmn4h00tgpqio"]
 
 [ext_resource type="Texture2D" uid="uid://dnlldjbbjj2e2" path="res://assets/tileset/actors/npc/map_2/butterfly_goddess_bathala_2.png" id="1_30x3x"]
-[ext_resource type="Script" path="res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.gd" id="1_726jg"]
+[ext_resource type="Script" uid="uid://cc80mseic0hug" path="res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.gd" id="1_726jg"]
 [ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_f4yhj"]
-[ext_resource type="Script" path="res://source/actors/npc/map_2/goddess_bathala/quest_manager.gd" id="2_pb7h6"]
+[ext_resource type="Script" uid="uid://dl2lh1lc7uu3h" path="res://source/actors/npc/map_2/goddess_bathala/quest_manager.gd" id="2_pb7h6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o81qc"]
 radius = 8.0
@@ -60,9 +60,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
 _data = {
-"RESET": SubResource("Animation_3x6d5"),
-"idle": SubResource("Animation_sp3jk"),
-"look_back": SubResource("Animation_5reoq")
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
 }
 
 [node name="goddess_bathala" type="StaticBody2D"]
